@@ -1,0 +1,67 @@
+.week li{
+		float:left;
+		height:25px;
+		margin:4px 5px;
+		text-align:center;
+		font-size:16px;
+		vertical-align:middle;
+		line-height:25px;
+		width:95px;
+	}
+	.week li input {
+		width:14px;
+		height:14px;
+	}
+	td {
+		width:90px;
+		height:24px;
+		line-height:24px;
+		cursor:pointer;
+		background:#ddd;
+		border:5px solid #fff;
+		font-size:14px;
+		font-family:arial;
+	}
+	
+	.tdSelect{
+		background:#3CF;
+	}
+	
+	.selectTime {
+		border:1px solid #666;
+	}
+	
+	.extraService .week li{
+		float:left;
+		height:25px;
+		margin:4px 5px;
+		font-size:16px;
+		line-height:25px;
+		width:170px;
+	}
+	/************************/
+	.selectedAddressWrap{
+		padding:10px;
+		border:1px solid rgb(222,222,222);
+	}
+	.addressItem{
+		margin-right:20px;
+		margin-top:10px;
+				
+	}
+	.removeBtn{
+		margin-left:10px;
+	}
+	.addressItem .selectedaddress{
+		border:2px solid blue;
+		text-align:center;
+		padding:5px;
+		background-color:rgb(172,172,172);
+		display:-moz-inline-box;
+		display:inline-block;
+		width:300px; 
+	}
+	.addressChooseComponents{
+		margin-top:20px;		
+	}
+	/************************/

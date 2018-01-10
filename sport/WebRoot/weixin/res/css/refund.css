@@ -1,0 +1,72 @@
+
+@charset "utf-8";
+.finance-settlement h2{
+			text-align: center;
+			margin-bottom: 20px;
+			letter-spacing: 5px;
+		}
+		.finance-settlement h4{
+			line-height: 20px;
+			margin: 5px 0px;
+			padding: 0;
+		}
+		.finance-settlement p{
+			background-color:rgb(170,203,246);
+			margin:5px 0 0 0;
+			border:1px solid #333 ;
+			padding: 2px 20px;
+		}
+		.finance-settlement b{
+			color: #D43F3A;
+		}
+		.finance-settlement-div{
+			border: 1px solid #333;
+			border-top:none ;
+			padding:5px 20px;
+		}
+	
+		.finance-settlement-input{
+			float: left;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			margin-left: 50px;
+			width: 90px;
+			padding: 6px 0;
+			text-align: center;
+			font-size: 20px;
+			color: #FFF;
+			border:1px solid #333;
+			cursor: pointer;
+			background: rgb(90,139,217) ;
+			}
+			.finance-settlement-button{
+			float: left;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			margin-left: 50px;
+			width: 80px;
+			padding: 5px 0;
+			text-align: center;
+			font-size: 20px;
+			color: #FFF;
+			border:1px solid #333;
+			cursor: pointer;
+			background: rgb(90,139,217) ;
+			}
+			.finance-settlement-button a{
+				text-decoration:none;
+				color:#FFF;
+			}
+		.finance-settlement-div input{
+			width: 200px;
+			height: 20px;
+			line-height: 20px;
+		}
+		.refundtip p{
+			background-color:rgb(170,203,246);
+			margin: 0 !important;
+			
+			border: none;
+			
+			padding: 2px 20px;
+		}

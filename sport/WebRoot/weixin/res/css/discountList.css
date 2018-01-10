@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+#header, #content , #footer {
+	width: 100%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+/******************************  top banner  ********************************/
+
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+
+/******************************  discount list  ********************************/
+
+.discountListBox {
+	width:95%;
+	margin:0px auto;
+}
+
+.discountList li {
+	font-size:16px;
+	line-height:1.5em;
+	vertical-align:middle;
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+.discountList li {
+	overflow:hidden;
+	border-radius: 5px 5px 10px 10px;
+	-moz-border-radius: 5px 5px 10px 10px;
+	-webkit-border-radius: 5px 5px 10px 10px;
+	-o-border-radius:5px 5px 10px 10px;
+	border:1px solid #d0d1d4;
+	margin: 10px auto;
+	padding: 8px 8px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	background: url(../image/bottom.png) repeat-x scroll left bottom #FFFFFF;
+	background-size:2px auto;
+}
+
+.discountList li .ChannelName {
+	margin: 0px auto;
+	padding: 0px 0px 5px 5px;
+	font-size: 15px;
+}
+
+.discountList li .ChannelPicture {
+	border: 0px solid red
+}
+.discountList li .ChannelPicture img {
+	width:100%;
+	max-height:160px;
+}
+.discountList li .ChannelIntroduction {
+	line-height: 20px;
+	border:0px solid #900;
+	padding:5px 5px;
+	color:#222222;
+	font-size:13px;
+}
+
+.wxlist li .GoTop {
+	text-align:center;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	color:#000
+}
+
+.ShowInfo {
+	height: 20px;
+	line-height: 1.1em;
+	font-size:14px;
+	border-top: 1px solid #bdbec1;
+	vertical-align:middle;
+	padding-top:10px;
+	padding-left: 5px;
+	color:#000000;
+}

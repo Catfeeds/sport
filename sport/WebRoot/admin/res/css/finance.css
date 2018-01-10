@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+*{
+			border: none;
+			margin: 0;
+			padding: 0;
+			b order: 1px solid red;
+		}
+		.clearfix{
+			clear: both;
+		}
+		.finance-mainbody{
+			width: 1000px;
+			font-family: "微软雅黑";
+			margin:10px auto;
+		}
+		/*---------- start title------------------*/
+		.finance-title{
+			text-align: center;
+			height: 60px;
+		}
+		.finance-title h2{
+			text-align: center;
+			margin:30px;
+		}
+		.finance-title i{
+			float: left;
+			text-align: left;
+			margin-left: 50px;
+			font-size: 14px;
+			margin-bottom:10px;
+		}
+		
+		.finance-select-financetype{
+			width:500px;
+			float: left;
+			margin: 0;
+			margin-left:20px;
+			list-style: none;
+			height: 22px;
+		}
+		.finance-select-financetype li{
+			float: left;
+			margin: 0 5px;
+		}
+		.finance-select-financetype a{
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 2px;
+			color: #666;
+			text-decoration: none;
+		}
+		.finance-select-financetype a:hover{
+			color: #D43F3A;
+		}
+		
+		.finance-search{
+			float: right;
+		}
+		
+		.finance-search-input{
+			border: 1px solid rgb(57,173,180);
+			border-radius: 10px 0 0 10px;
+			height: 22px;
+			padding: 0 10px;
+			float: right;
+			width: 160px ;outline: none;
+		}
+	
+		.finance-search-button{
+			border: 1px solid rgb(57,173,180);
+			border-left: none !important;
+			border-radius: 0 10px 10px 0;
+			background: #fff;
+			height: 24px;
+			padding: 3px 10px;
+			float: right;
+			margin-right: 20px;
+			
+		}
+		/*-------------end---title---------------------*/
+		/*-------------start--table-------------*/
+		.finance-table{
+			width: 1000px;
+			font-size: 14px;
+			border-radius: 10px 0 0 0 ;
+			 
+		}
+		/*--------thead---*/		
+		.finance-table thead{
+			background-color: rgb(57,173,180);
+			width: 1000px;
+			color: #fff;
+			font-size: 14px;
+		}
+		
+		.finance-table  thead td{
+			border-right: 1px solid rgb(211,211,211);
+			padding: 0 5px;
+			text-align: center;
+		}
+		.finance-table thead tr{
+			height: 30px;
+		}	
+		.finance-table thead{
+			background-color: rgb(57,173,180);
+			width: 1000px;
+			color: #fff;
+			font-size: 14px;
+		}
+		/*---编号--*/
+		.finance-thead-No{
+			width:100px ;
+			-webkit-box-shadow:10px 0 0 0;
+			border-radius: 10px 0 0 0;
+		}
+		/*类型*/
+		.finance-thead-type{
+			width:60px;
+		}
+		/*名*/
+		.finance-thead-name{
+			width: 130px ;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space:nowrap;  
+		}
+		/*时间*/
+		.finance-thead-date{
+			width: 140px;
+		}
+		/*金额*/
+		.finance-thead-value{
+			width: 80px;
+		}
+		/*操作*/
+		.finance-thead-operate{
+			width: 100px;
+			-webkit-box-shadow:0 10px 0 0;
+			border-radius: 0 10px 0 0;
+		}
+		/*----------tbody--------------*/
+		.finance-table tbody tr{
+			height: 25px;
+		}
+		.finance-table tbody td{
+			padding:0 5px;
+			border-right: 1px solid #ADADAD;
+			border-bottom: 1px solid #ADADAD;
+			border-radius: 0 !important;
+			color: #333333;
+			
+		}			
+		/*---编号--*/
+		.finance-tbody-No{
+			width:100px ;
+			text-align: center;
+		}
+		/*类型*/
+		.finance-tbody-type{
+			width:60px;
+		}
+		/*场地&教练名*/
+		.finance-tbody-name{
+			width: 130px ; 
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space:nowrap;
+			
+		}
+		.finance-tbody-name div{
+			width: 130px ;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		
+		/*订单时间*/
+		.finance-tbody-date{
+			width: 140px;
+		}
+		.finance-tbody-date div{
+			width: 140px;
+			font-size: 12px !important;
+		}
+		/*价格*/
+		.finance-thead-value{
+			width: 80px;
+			text-align: right;
+		}
+		.finance-thead-remark div{
+			width:auto;
+		}
+		/*操作*/
+		.finance-tbody-operate{
+			padding-left: 5px;
+			width: 100;
+			border-radius: 0 10px 0 0;
+		}
+		.finance-tbody-operate a{
+			text-decoration: none;
+			color: #39c;			
+			font-weight: 700;
+		}
+		.finance-tbody-operate a:hover{
+			color: #D43F3A;			
+		}
+		
+		
+		/*-------end table-------------*/
+		/*--------start footer------------------*/
+		.finance-footer{
+			text-align: center;
+			margin: 10px 0;
+			height: 20px;
+		}
+		.finance-footer p{
+			text-align:left;
+			float: left;
+			margin:0 20px;
+			font-size: 16px;
+			
+		}
+		.finance-footer r{
+			font-weight: 700;
+			color: red;
+		}
+		.finance-footer input[type=button]{
+			float: right;
+			border: 1px solid #fff;
+			font-size: 10px;
+			font-weight: 700;
+			padding: 2px 5px;
+			margin: auto 10px 0 10px;
+			cursor: pointer;
+			/*按钮渐变*/
+			FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f6f6f8,endColorStr=#5BC0DE); /*IE 6 7 8*/ 
+			background:-moz-linear-gradient(top,#5BC0DE,#f6f6f8);/*火狐*/ 
+			background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#5BC0DE), to(#f6f6f8));/*谷歌*/ 
+			background: -webkit-linear-gradient(top, #f6f6f8, #5BC0DE);   /*Safari5.1 Chrome 10+*/
+			background: -o-linear-gradient(top, #fff, #5BC0DE);  /*Opera 11.10+*/
+		}
+		/*-----end footer----------*/
+		
+
+
+
+
+/*-----------------settlement begin-------------------------------*/
+
+	.finance-settlement{
+			border: 1px solid #DDDDDD;
+			border-radius: 10px;
+			padding:20px  10px;
+			width:600px;
+			height: 400px;
+			margin: auto;
+
+			font-size: 16px;
+			font-family: "微软雅黑";
+			background:#F0F0EE;
+		}
+		.finance-settlement h2{
+			text-align: center;
+			margin-bottom: 20px;
+			letter-spacing: 5px;
+		}
+		.finance-settlement h4{
+			line-height: 20px;
+			margin: 5px 0px;
+			padding: 0;
+		}
+		.finance-settlement p{
+			background-color:rgb(170,203,246);
+			margin: 0;
+			border:1px solid #333 ;
+			padding: 2px 20px;
+		}
+		.finance-settlement b{
+			color: #D43F3A;
+		}
+		.finance-settlement-div{
+			border: 1px solid #333;
+			border-top:none ;
+			padding:5px 20px;
+		}
+	
+		.finance-settlement-button{
+			float: left;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			margin-left: 100px;
+			width: 150px;
+			padding: 5px 0;
+			text-align: center;
+			font-size: 20px;
+			color: #FFF;
+			border:1px solid #333;
+			cursor: pointer;
+			background: rgb(90,139,217) ;
+		}
+/*-----------------settlement end-------------------------------*/
+
+
+
+
+
+

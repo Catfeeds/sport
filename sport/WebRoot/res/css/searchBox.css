@@ -1,0 +1,79 @@
+
+
+.searchAndLogoBox .searchBox {
+	border: 2px solid #6699FF;
+	height: 35px;
+	margin: 35px auto 0 300px;
+	width: 525px;
+}
+
+.searchAndLogoBox .searchBox select {
+	display: none;
+}
+
+.searchAndLogoBox .searchBox .select_box {
+	font-size: 12px;
+	color: #999999;
+	width: 100px;
+	line-height: 35px;
+	float: left;
+	position: relative;
+}
+
+.searchAndLogoBox .searchBox .select_showbox {
+	height: 35px;
+	background: url(../images/search_ico.png) no-repeat 60px center;
+	text-indent: 1.5em;
+}
+
+.searchAndLogoBox .searchBox .select_showbox.active {
+	background: url(../images/search_ico_hover.png) no-repeat 60px center;
+}
+
+.searchAndLogoBox .searchBox .select_option {
+	border: 2px solid #6699FF;
+	border-top: none;
+	display: none;
+	left: -2px;
+	top: 35px;
+	position: absolute;
+	z-index: 99;
+	background: #fff;
+}
+
+.searchAndLogoBox .searchBox .select_option li {
+	text-indent: 1.5em;
+	width: 70px;
+	cursor: pointer;
+}
+
+.searchAndLogoBox .searchBox .select_option li.selected {
+	background-color: #F3F3F3;
+	color: #999;
+}
+
+.searchAndLogoBox .searchBox .select_option li.hover {
+	background: #BEBEBE;
+	color: #fff;
+}
+
+.searchAndLogoBox .searchBox input.inp_srh,.searchAndLogoBox .searchBox input.btn_srh {
+	border: none;
+	background: none;
+	height: 35px;
+	line-height: 35px;
+	float: left
+}
+
+.searchAndLogoBox .searchBox input.inp_srh {
+	outline: none;
+	width: 365px;
+}
+
+.searchAndLogoBox .searchBox input.btn_srh {
+	background: #6699FF;
+	color: #FFF;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	width: 60px;
+}

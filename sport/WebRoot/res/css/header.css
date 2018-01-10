@@ -1,0 +1,277 @@
+﻿@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, "微软雅黑"; 
+	font-size: 12px;
+}
+
+/****************  topbanner  ***************************/
+
+.topbanner {
+	width: 100%; 
+	height: 30px; 
+	line-height: 30px; 
+	border-bottom-color: rgb(230, 230, 230); 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	min-width: 1190px; 
+	background-color: rgb(244, 244, 244);
+
+}
+
+.topbannerBox {
+	margin: 0px auto; 
+	width: 1180px; 
+	overflow: hidden;
+	height: 30px;
+
+}
+
+.topbannerBox a {
+	color: rgb(51, 51, 51);
+	text-decoration: none;
+}
+
+.topbannerBox a:hover {
+	color: rgb(209, 0, 0);
+}
+
+.topbannerBoxLeft {
+	float: left;
+	margin-left:100px;
+}
+
+.topbannerBoxWord{
+	padding-top: 1px;	
+	float: left;
+}
+
+.topbannerBoxLogo {
+	float: left;
+}
+
+.topbannerBoxLogo img{
+	padding-top: 2px;
+	width: 26px;
+	height: 26px;
+}
+
+.topbannerBoxRight {
+	float: right;
+	margin-right:100px;
+}
+
+.topbannerBoxRight a{
+	padding: 0px 8px; 
+	font-size: 12px;
+	display: inline-block;
+}
+.topbannerBoxRight span {
+	color: rgb(209, 0, 0); 
+	font-weight: bold;
+}
+.topbannerBoxRight a.onlinea {
+	color: rgb(51, 51, 51);
+	text-decoration: none; 
+	cursor: text;
+}
+
+/****************  searchBox  ***************************/
+
+.searchAndLogoBox {
+	height:100px;
+	width:1000px;
+	margin: 0px auto;
+	border: 1px solid #ffffff;	
+}
+.addressListWrap{
+	height:100px;
+	line-height:100px;
+	float:left;
+	margin-left:50px;
+}
+.searchAndLogoBox .logoBox {
+	float: left;
+	margin-left: 20px;
+}
+
+.searchAndLogoBox .logoBox a img {
+	max-height:100px;
+	max-width:100px;
+}
+
+.searchAndLogoBox .searchBox {
+	border: 2px solid #39c;
+	height: 35px;
+	margin: 30px auto 0 250px;
+	width: 525px;
+}
+
+.searchAndLogoBox .searchBox select {
+	display: none;
+}
+
+.searchAndLogoBox .searchBox .select_box {
+	font-size: 12px;
+	color: #999999;
+	width: 100px;
+	line-height: 35px;
+	float: left;
+	position: relative;
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox .select_showbox {
+	height: 35px;
+	background: url(../images/search_ico.png) no-repeat 60px center;
+	text-indent: 1.5em;
+}
+
+.searchAndLogoBox .searchBox .select_showbox.active {
+	background: url(../images/search_ico_hover.png) no-repeat 60px center;
+}
+
+.searchAndLogoBox .searchBox .select_option {
+	border: 2px solid #39c;
+	border-top: none;
+	display: none;
+	left: -2px;
+	top: 35px;
+	position: absolute;
+	background: #fff;
+}
+
+.searchAndLogoBox .searchBox .select_option li {
+	text-indent: 1.5em;
+	width: 70px;
+	cursor: pointer;
+}
+
+.searchAndLogoBox .searchBox .select_option li.selected {
+	background-color: #F3F3F3;
+	color: #999;
+}
+
+.searchAndLogoBox .searchBox .select_option li.hover {
+	background: #BEBEBE;
+	color: #fff;
+}
+
+.searchAndLogoBox .searchBox input.inp_srh,.searchAndLogoBox .searchBox input.btn_srh {
+	border: none;
+	background: none;
+	height: 35px;
+	line-height: 35px;
+	float: left
+}
+
+.searchAndLogoBox .searchBox input.inp_srh {
+	outline: none;
+	width: 365px;
+}
+
+.searchAndLogoBox .searchBox input.btn_srh {
+	background: #39c;
+	color: #FFF;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	width: 60px;
+}
+
+/**********************  main banner ************************/
+
+/*********************  mainbanner **********************/
+
+.mainbanner {
+	width: 100%;
+	height: 50px;
+	background: #3399CC;
+	position: absolute;
+	left:0px;
+	z-index:0;
+	
+}
+
+.mainbannerBox {
+	width: 1000px;
+	height: 50px;
+	margin: 0px auto;
+}
+
+
+.mainbannerNav {
+	height: 50px;
+	float: left;
+}
+
+.mainbannerNav ul li {
+	width: 110px;
+	list-style-type: none;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+}
+
+.mainbannerNav ul li a {
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	padding: 12px 20px;
+}
+
+.mainbannerSelected {
+	height: 50px;
+	background: #3cf;
+	border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	-o-border-radius: 20px 20px 0 0;
+}
+
+.mainbannerLoginAndRegister {
+	float: right;
+	width: 200px;
+	height: 40px;
+	margin-right: 20px;
+
+}
+
+
+
+.mainbannerLogin {
+	float: left;
+	width: 70px;
+	height: 30px;
+	border:1px solid #fff;
+	margin-left: 20px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 15px;
+	margin-top: 10px;
+
+}
+
+.mainbannerRegister {
+	margin-top: 10px;
+	margin-right:20px;
+	width: 70px;
+	height: 30px;
+	border:1px solid #fff;
+	border-radius: 15px;
+	float: right;
+	color: #fff;
+	text-decoration: none;
+	line-height: 30px;
+	text-align: center;
+	
+}
+
+
+.mainbannerRegister:hover, .mainbannerLogin:hover {
+	text-decoration: none;
+	background: #3cf;
+}

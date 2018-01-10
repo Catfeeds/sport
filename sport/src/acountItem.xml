@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="student" code="student" name="账单详细">
+    <colgroup>
+        <col index="A" width='20em'></col>
+        <col index="B" width='20em'></col>
+        <col index="C" width='20em'></col>
+        <col index="D" width='20em'></col>
+        <col index="E" width='20em'></col>
+        <col index="F" width='30em'></col>            
+    </colgroup>
+    <title>
+        <tr height="16px">
+            <td rowspan="1" colspan="6" value="title" bold="true"  fontsize="20"  />
+        </tr>
+        <tr height="16px">
+            <td rowspan="2" colspan="1" value="已结算金额:" 	bold="false"  fontsize="14" />
+            <td rowspan="2" colspan="2" value="payedTotalFee" 	bold="false"  fontsize="14" />
+            <td rowspan="2" colspan="3" value="未结算金额" 	bold="false"  fontsize="14" />
+            <td rowspan="2" colspan="4" value="totalFee" 	bold="false"  fontsize="14" />
+            <td rowspan="2" colspan="5" value="创建日期" 	bold="false"  fontsize="14" />
+		    <td rowspan="2" colspan="6" value="createDate" 	bold="false" fontsize="14" />     
+        </tr>
+    </title>
+    <thead>
+        <tr height="16px">
+        	<th value="编号#" />
+            <th value="类型" />
+            <th value="教练名/场馆名" />
+            <th value="定单支付时间" />
+            <th value="订单总金额" />
+            <th value="订单状态" />
+        </tr>
+    </thead>
+    <tbody>
+        <tr height="16px" firstrow="2" firstcol="0" repeat="1">
+			<td value="@" />
+			<td value="@" />
+			<td value="@" />
+			<td value="#" />
+			<td value="@" />
+			<td value="@" />
+        </tr>
+    </tbody>
+</excel>

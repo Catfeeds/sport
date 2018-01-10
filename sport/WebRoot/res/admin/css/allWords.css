@@ -1,0 +1,28 @@
+body{
+	height:0 auto;
+	width: 1000px;
+	margin:0 auto;
+}
+.userallwrap{
+	background-color: #445555;
+	height:auto;
+	padding-top:50px;
+}
+ul,li{
+	list-style:none;
+	margin-top:20px;
+}
+//留言排版
+.allWords,.words{
+	width:1000px;
+	height:auto;
+	text-align:left;
+}
+.title{
+	margin:0 auto;
+	color:#ff00aa;
+}
+.childrenWords,.rootWords{
+	text-align:left;
+}
+

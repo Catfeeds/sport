@@ -1,0 +1,69 @@
+.forumTypeChooseWrap,.noticeWrap{
+	width:100%;
+	height:260px;
+}
+#typeContent {
+	float: left;
+	width: 100%;
+	height:260px;
+}
+.typeBox ,.noticeInnerWrap{
+	background: #fbfcfc;
+	padding: 1px;
+	margin-bottom: 20px;
+}
+
+.typeBox-head {
+	background: #ba4c32;
+	height: 32px;
+	color: #fff;
+	padding: 0 10px;
+	line-height: 32px;
+	white-space: nowrap;
+	border-bottom: solid 1px #fff;
+}
+
+.typeBox-head .right {
+	padding-top: 5px;
+	line-height: 13px;
+}
+/********分类内部排版*******/
+.forumTypeWrap{
+	width:100%;
+	height:min-height:260px;
+}
+.forumType{	
+	width:188px;
+	height:80px;
+	margin-right:2px;
+	background:rgb(242,242,242);
+	padding: 2px;
+	border: 1px solid #CCC;
+}
+.typeImg{
+	float:left;
+	width:80px;
+	height:80px;
+}
+.typeImg img{
+	width:80px;
+	height:80px;
+}
+.typeInfo{
+	padding-top:10px;
+	padding-left:10px;
+	font-size:14px;
+}
+.typeName{
+	margin-bottom:10px;
+}
+.previewImg{
+	min-width:100px;
+	min-height:100px;
+	max-width:300px;
+	max-width:300px;
+}
+/********社区公告区**********/
+.noticeInnerWrap{
+	
+}

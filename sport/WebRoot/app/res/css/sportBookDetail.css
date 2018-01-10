@@ -1,0 +1,235 @@
+﻿@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+#header, #content , #footer {
+	width: 100%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+/******************************  top banner  ********************************/
+
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+
+/******************************  detail list  ********************************/
+
+.detailBox {
+	border-width: 1px 0 1px 0;
+	background-color: #fff;
+	margin-bottom: 12px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.detailBox h2{
+	color: #f60;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	margin-left: 1%;
+	padding: 5px 10px;
+}
+
+.orderdetailContentTable {
+    margin-left: 1%;
+    width: 98%;
+    border: 1px solid #ddd;
+}
+
+.orderdetailContentTable tr {
+	height: 25px;
+}
+
+.orderdetailContentTable tr, .orderdetailContentTable td,.orderdetailContentTable th {
+    font-size: 14px;
+    padding: 5px 5px ;
+}
+
+.orderdetailContentTable th {
+	font-weight: normal;
+	width: 80px;
+}
+
+.orderdetailPlace li {
+	font-size: 14px;
+}
+
+.orderdetailDate {
+    color: #f60;
+}
+
+.orderdetailPrice{
+	color: #f60;
+}
+
+.detailPriceBox {
+	border-width: 1px 0 1px 0;
+	background-color: #fff;
+	margin-bottom: 12px;
+	width: 100%;
+	overflow: hidden;
+	margin-top: -8px;
+}
+
+/******************************  confirm code  ********************************/
+
+.confirmCode {
+
+}
+
+.infos {
+	width:98%;
+	height: 28px;
+	line-height: 28px;
+	border:1px solid #BFBFBF;
+	padding:2px;
+	margin: 2px auto;
+	border-radius:4px;
+	float: left;
+	margin-left: 1%;
+}
+
+#phone {
+	width: 60%;
+	margin-top: 10px;
+}
+
+#ranks {
+	width: 96%;
+}
+.div-phone a.send1 {
+	height: 26px;
+	text-decoration:none;
+	line-height: 26px;
+	padding:4px 0px;
+	margin-top: 9px;
+	width: 35%;
+	background: #3cf;
+	font-family: "微软雅黑";
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	float: left;
+	border-radius:2px;
+	margin-left:1%;
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	-ms-transition:all 0.2s linear;
+	-o-transition:all 0.2s linear;
+	transition:all 0.2s linear;
+}
+.div-phone a.send1:hover {
+	text-decoration: none;
+	background: #39c;
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	-ms-transition:all 0.2s linear;
+	-o-transition:all 0.2s linear;
+	transition:all 0.2s linear;
+}
+.div-phone a.send0 {
+	height: 26px;
+	text-decoration:none;
+	line-height: 26px;
+	padding:4px 0px;
+	margin-top: 9px;
+	width: 35%;
+	background: #A1A1A1;
+	font-family: "微软雅黑";
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	float: left;
+	border-radius:2px;
+	margin-left:2px;
+}
+.div-phone a.send0:hover {
+	background: #A1A1A1;
+	font-family: "微软雅黑";
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+span.error {
+	height: 20px;
+	line-height: 20px;
+	padding:2px;
+	width: 100px;
+	color: red;
+	padding-left:20px;
+	display: block;
+	float: left;
+	margin-left:10px;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #666;
+	font-size: 12px;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color:#666;
+	font-size: 12px;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color:#666;
+	font-size: 12px;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+	color:#666;
+	font-size: 12px;
+}
+
+
+/******************************  confirm code  ********************************/
+
+.confirmOrder {
+	margin: 0px auto;
+	margin-top: 20px;
+	width: 290px;
+}
+
+.confirmOrder .confirmBtn a {
+	padding: 12px 110px;
+	background: #f60;
+	color: #fff;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+}
+
+.warnInfo {
+	margin-top: 15px;
+	padding: 5px 10px;	
+	clear: #666;
+	font-size: 12px;
+}
+
+.warnInfo span {
+	color: #f60;
+	font-size: 12px;
+}

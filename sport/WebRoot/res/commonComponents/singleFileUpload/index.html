@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>jquery文件上传表单 - A5下载</title>
+		<link href="css/uploadSingleFile.css" type="text/css" rel="stylesheet" />
+		<style type="text/css">body{font-family:Arial,Verdana,sans-serif; margin:100px;}</style>
+	<script id="jquery_172" type="text/javascript" class="library" src="js/jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+		
+<div class="uploadSigleFile">
+	<div class="uploader blue">
+		<input type="text" class="filename" readonly="readonly"/>
+		<input type="button" name="file" class="button" value="Browse..."/>
+		<input type="file" size="30"/>
+	</div>
+</div>
+
+	</body>
+</html>
+	<script>$(function(){
+	$("input[type=file]").change(function(){$(this).parents(".uploader").find(".filename").val($(this).val());});
+	$("input[type=file]").each(function(){
+	if($(this).val()==""){$(this).parents(".uploader").find(".filename").val("No file selected...");}
+	});
+});
+</script>

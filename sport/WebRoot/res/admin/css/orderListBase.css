@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*!
+ * @��ƣ�base.css
+ * @���ܣ�1�����������Ĭ����ʽ
+ *       2������ͨ��ԭ����
+ */
+/* ��ֹ�û��Զ��屳����ɫ����ҳ��Ӱ�죬������û������Զ������� */
+html {
+    background:white;
+    color:black;
+}
+/* ����߾�ͨ���ø����������ʽ�ı���λ�ò�ͬ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;
+    padding:0;
+}
+/* Ҫע��?Ԫ�ز����̳и��� font ������ */
+body,button,input,select,textarea {
+    font:12px \5b8b\4f53,arial,sans-serif;
+}
+input,select,textarea {
+    font-size:100%;
+}
+/* ȥ�� table cell �ı߾ಢ������غ� */
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* ie bug��th ���̳� text-align */
+th {
+    text-align:inherit;
+}
+/* ȥ��Ĭ�ϱ߿� */
+fieldset,img {
+    border:none;
+}
+/* ie6 7 8(q) bug ��ʾΪ���ڱ��� */
+iframe {
+    display:block;
+}
+/* ȥ�� firefox �´�Ԫ�صı߿� */
+abbr,acronym {
+    border:none;
+    font-variant:normal;
+}
+/* һ�µ� del ��ʽ */
+del {
+    text-decoration:line-through;
+}
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:500;
+}
+/* ȥ���б�ǰ�ı�ʶ��li ��̳� */
+ol,ul {
+    list-style:none;
+}
+/* �������Ű�����Ҫ�����أ�����ʲô������ */
+caption,th {
+    text-align:left;
+}
+/* ����yahoo���ñ��ⶼ�Զ��壬��Ӧ���ϵͳӦ�� */
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:500;
+}
+q:before,q:after {
+    content:'';
+}
+/* ͳһ�ϱ���±� */
+sub,sup {
+    font-size:75%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline;
+}
+sup {
+    top:-0.5em;
+}
+sub {
+    bottom:-0.25em;
+}
+
+/* Ĭ�ϲ���ʾ�»��ߣ�����ҳ���� */
+ins,a {
+    text-decoration:none;
+}
+/* ȥ�� ie6 & ie7 �����״�� */
+a:focus,*:focus {
+    outline:none;
+}
+/* ��� */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}
+.clearfix {
+    zoom:1; /* for ie6 & ie7 */
+}
+.clear {
+    clear:both;
+    display:block;
+    font-size:0;
+    height:0;
+    line-height:0;
+    overflow:hidden;
+}
+/* ������ʾ�����أ�ͨ�������� js ��� */
+.hide {
+    display:none;
+}
+.block {
+    display:block;
+}
+/* ���ø��������ٸ��������� bug */
+.fl,.fr {
+    display:inline;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}

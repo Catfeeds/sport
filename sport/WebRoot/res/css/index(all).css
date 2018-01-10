@@ -1,0 +1,374 @@
+﻿@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, "微软雅黑"; 
+	font-size: 12px;
+}
+
+/******************  top banner ***********************/
+
+/****************  topbanner  ***************************/
+
+.topbanner {
+	width: 100%; 
+	height: 30px; 
+	line-height: 30px; 
+	border-bottom-color: rgb(230, 230, 230); 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	min-width: 1190px; 
+	background-color: rgb(244, 244, 244);
+
+}
+
+.topbannerBox {
+	margin: 0px auto; 
+	width: 1180px; 
+	overflow: hidden;
+	height: 30px;
+
+}
+
+.topbannerBox a {
+	color: rgb(51, 51, 51);
+	text-decoration: none;
+}
+
+.topbannerBox a:hover {
+	color: rgb(209, 0, 0);
+}
+
+.topbannerBoxLeft {
+	float: left;
+	margin-left:100px;
+}
+
+.topbannerBoxWord{
+	padding-top: 1px;	
+	float: left;
+}
+
+.topbannerBoxLogo {
+	float: left;
+}
+
+.topbannerBoxLogo img{
+	padding-top: 2px;
+	width: 26px;
+	height: 26px;
+}
+
+.topbannerBoxRight {
+	float: right;
+	margin-right:100px;
+}
+
+.topbannerBoxRight a{
+	padding: 0px 8px; 
+	font-size: 12px;
+	display: inline-block;
+}
+.topbannerBoxRight span {
+	color: rgb(209, 0, 0); 
+	font-weight: bold;
+}
+.topbannerBoxRight a.onlinea {
+	color: rgb(51, 51, 51);
+	text-decoration: none; 
+	cursor: text;
+}
+
+/****************  searchBox  ***************************/
+
+.searchAndLogoBox {
+	height:100px;
+	width:1000px;
+	margin: 0px auto;
+	border: 1px solid red;	
+	
+}
+
+.searchAndLogoBox .logoBox {
+	float: left;
+	margin-left: 20px;
+}
+
+.searchAndLogoBox .logoBox a img {
+	max-height:100px;
+	max-width:100px;
+}
+
+.searchAndLogoBox .searchBox {
+	border: 1px solid red;
+	border: 2px solid #6699FF;
+	height: 35px;
+	margin: 35px auto 0 300px;
+	width: 525px;
+	
+}
+
+.searchAndLogoBox .searchBox select {
+	display: none;
+}
+
+.searchAndLogoBox .searchBox .select_box {
+	font-size: 12px;
+	color: #999999;
+	width: 100px;
+	line-height: 35px;
+	float: left;
+	position: relative;
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox .select_showbox {
+	height: 35px;
+	background: url(../images/search_ico.png) no-repeat 60px center;
+	text-indent: 1.5em;
+}
+
+.searchAndLogoBox .searchBox .select_showbox.active {
+	background: url(../images/search_ico_hover.png) no-repeat 60px center;
+}
+
+.searchAndLogoBox .searchBox .select_option {
+	border: 2px solid #6699FF;
+	border-top: none;
+	display: none;
+	left: -2px;
+	top: 35px;
+	position: absolute;
+	background: #fff;
+	
+	
+}
+
+.searchAndLogoBox .searchBox .select_option li {
+	text-indent: 1.5em;
+	width: 70px;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox .select_option li.selected {
+	background-color: #F3F3F3;
+	color: #999;
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox .select_option li.hover {
+	background: #BEBEBE;
+	color: #fff;
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox input.inp_srh,.searchAndLogoBox .searchBox input.btn_srh {
+	border: none;
+	background: none;
+	height: 35px;
+	line-height: 35px;
+	float: left
+	z-index: 99;
+}
+
+.searchAndLogoBox .searchBox input.inp_srh {
+	outline: none;
+	width: 365px;
+}
+
+.searchAndLogoBox .searchBox input.btn_srh {
+	background: #6699FF;
+	color: #FFF;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	width: 60px;
+}
+
+
+/*********************  mainbanner **********************/
+
+.mainbanner {
+	width: 100%;
+	height: 40px;
+	background: #3399CC;
+	position: absolute;
+	left:0px;
+	z-index:0;
+	
+}
+
+.mainbannerBox {
+	width: 1000px;
+	height: 40px;
+	margin: 0px auto;
+}
+
+
+.mainbannerNav {
+	height: 40px;
+	float: left;
+}
+
+.mainbannerNav ul li {
+	width: 110px;
+	list-style-type: none;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+
+.mainbannerNav ul li a {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.mainbannerSelected {
+	height: 40px;
+	background: #3cf;
+	border-radius: 20px 20px 0 0;
+}
+
+.mainbannerLoginAndRegister {
+	float: right;
+	width: 200px;
+	height: 40px;
+	margin-right: 20px;
+
+}
+
+
+
+.mainbannerLogin {
+	float: left;
+	width: 70px;
+	height: 30px;
+	border:1px solid #fff;
+	margin-left: 20px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 15px;
+	margin-top: 4px;
+
+}
+
+.mainbannerRegister {
+	margin-top: 4px;
+	margin-right:20px;
+	width: 70px;
+	height: 30px;
+	border:1px solid #fff;
+	border-radius: 15px;
+	float: right;
+	color: #fff;
+	text-decoration: none;
+	line-height: 30px;
+	text-align: center;
+	
+}
+
+
+.mainbannerRegister:hover, .mainbannerLogin:hover {
+	text-decoration: none;
+	background: #3cf;
+}
+
+
+/********************* ad player **********************/
+
+
+/*
++----------------------------------------------------------------+
+	Extras
++----------------------------------------------------------------+
+*/
+
+.cf:before, .cf:after {
+	content: " ";
+	display: table
+}
+.cf:after {
+	clear: both
+}
+.clear {
+	clear: both
+}
+/*
++----------------------------------------------------------------+
+	Definicoes Gerais
++----------------------------------------------------------------+
+*/
+
+/*
++----------------------------------------------------------------+
+	Slideshow
++----------------------------------------------------------------+
+*/
+
+.slider {
+	margin: 0 auto;
+	width: 1000px;
+	padding-bottom: 5px;
+}
+.slider-container {
+	height: 425px;
+	margin-top: 50px;
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+}
+.slider-container .slider-wrapper {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 5000em; /*Fix for prevent display errors*/
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+.slider-container .slide {
+	float: left;
+	height: 425px;
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+}
+.slider-nav {
+	
+	margin-top: 15px;
+	text-align: center;
+	width: 1000px;
+}
+.slider-nav li {
+	display: inline;
+	padding: 3px;
+}
+.slider-nav .bullet {
+	background-color: #59baa8;
+	border-radius: 50%;
+	display: inline-block;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width: 16px;
+}
+.slider-nav .active {
+	background-color: #e7433b
+}
+.slider-nav .prev, .slider-nav .next {
+	background: url('../images/sprite.png') no-repeat;
+	display: inline-block;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width: 16px;
+}
+.slider-nav .next {
+	background-position: -15px top
+}

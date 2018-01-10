@@ -1,0 +1,56 @@
+/* CSS Document */
+
+/* CSS Document */
+.content{
+	width:1000px;
+	margin:auto;
+	padding:0;
+	border:0;
+	float:left;
+}
+table{
+	width:1000px;
+	//border:1px solid #ccaaaa;
+	border-spacing:0;
+	border-collapse: separate;
+}
+caption{
+	background-color:#334444;
+	color:#CCCCCC;
+	height:50px;
+	line-height:50px;
+	font-size:24px;
+	margin:0;
+}
+thead{
+	background-color: #336666;
+	color:#CCCCCC;
+	height:30px;
+	line-height:30px;
+}
+tbody{
+	display:block;
+	padding:40px 0;
+	background-color: #445555;
+}
+td{
+	font-size:14px;
+	line-height:30px;
+	text-align:right;
+	font-weight:bold;
+	color:#CCCCCC;
+}
+td+td{
+	font-size:14px;
+	line-height:30px;
+	text-align:left;
+	font-weight:bold;
+	color:#cccccc;
+}
+
+.formbutton{
+	text-align:center;
+	margin-left:20px;
+}
+
+

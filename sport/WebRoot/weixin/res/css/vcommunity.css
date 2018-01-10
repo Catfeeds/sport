@@ -1,0 +1,229 @@
+﻿@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+/******************************  top banner  ********************************/
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+/******************************  主要四类菜单  ********************************/
+
+.channellist {
+	width:99%;
+	border:0px solid red;
+	margin:0px auto;
+}
+.channellist li {
+	float:left;
+	text-align: center;
+	border:0px dashed blue;
+	width:25%;
+}
+.channellist li a {
+	display:block;
+	margin:5px;
+	padding-top:0px;
+	padding:5px;
+	background-color:#FFFFFF;
+	border:0px solid #CCC ;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-o-border-radius:8px;
+}
+.channellist li .ChannelName {
+	text-align:center;
+	height:10px;
+	line-height:10px;
+	border:0px dashed red;
+	padding:5px;
+	font-size:14px
+}
+.channellist li .ChannelIcon {
+	text-align: center;
+	font-weight: bold;
+	overflow:hidden;
+	background: white center center no-repeat;
+	padding: 0px;
+	color:#FFFFFF;
+	margin:auto;
+
+	border-radius:8px 8px 0px 0px;
+	-webkit-border-radius:8px 8px 0px 0px;
+	-moz-border-radius:8px 8px 0px 0px;
+	-o-border-radius:8px 8px 0px 0px;
+}
+.channellist li .ChannelIcon img {
+	vertical-align:middle;
+	width:99%;
+}
+
+
+
+/******************************  隐藏菜单  ********************************/
+
+.hide{
+	width:99%;
+	border:0px solid red;
+	margin:0px auto;
+}
+
+.hide li {
+	float:left;
+	border:0px dashed blue;
+	width:23%;
+	margin:5px 1%;
+	text-align:center;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;		  
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.hide li a{
+	display:block;
+	padding-top:0px;
+	padding:5px;
+	background-color:#FFFFFF;
+	border:1px solid #39c ;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;		  
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+/******************************  热门场馆  ********************************/
+
+.hotSportHall {
+	border-bottom: 1px solid #e1e1e1;
+	text-align: center;
+	color: #3cf;
+	margin: 0px auto;
+	margin-top: 8px;
+	width: 95%;
+}
+
+
+/******************************  discount list  ********************************/
+
+.discountListBox {
+	width:95%;
+	margin:0px auto;
+	margin-bottom: 60px;
+}
+
+.discountList li {
+	font-size:16px;
+	line-height:1.5em;
+	vertical-align:middle;
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+.discountList li {
+	overflow:hidden;
+	border-radius: 5px 5px 10px 10px;
+	-moz-border-radius: 5px 5px 10px 10px;
+	-webkit-border-radius: 5px 5px 10px 10px;
+	-o-border-radius:5px 5px 10px 10px;
+	border:1px solid #d0d1d4;
+	margin: 10px auto;
+	padding: 8px 8px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	background: url(../image/bottom.png) repeat-x scroll left bottom #FFFFFF;
+	background-size:2px auto;
+}
+
+.discountList li .ChannelName {
+	margin: 0px auto;
+	padding: 0px 0px 5px 5px;
+	font-size: 15px;
+}
+
+.discountList li .ChannelPicture {
+	border: 0px solid red
+}
+.discountList li .ChannelPicture img {
+	width:100%;
+}
+.discountList li .ChannelIntroduction {
+	line-height: 20px;
+	border:0px solid #900;
+	padding:5px 5px;
+	color:#222222;
+	font-size:13px;
+}
+
+.ShowInfo {
+	height: 20px;
+	line-height: 1.1em;
+	font-size:14px;
+	border-top: 1px solid #bdbec1;
+	vertical-align:middle;
+	padding-top:10px;
+	padding-left: 5px;
+	color:#000000;
+}
+
+
+/******************************  write note tool bar  ********************************/
+
+#writeBar {
+	width: 94%;
+	margin: 0px auto;
+	height: 46px;
+	line-height:46px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right:0;
+	background: #f7f7f7;
+	border: 1px solid #ddd;
+}
+
+#writeBar a {
+	background: #fff;
+	min-height: 46px;
+	text-align: center;
+	font-size: 16px;
+	font-weight:bold;
+	display: block;
+	margin: 0px 70px 0;
+	padding: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	outline: 0 !important;
+	border: 1px solid red;
+	color:#3cf;
+	z-index: 3;
+	border: 1px solid #ddd;
+	border-top: none;
+
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+}

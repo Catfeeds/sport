@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;	
+	font-family: "微软雅黑";
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #39c;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: rgb(209, 0, 0);
+}
+
+.cd-nav-box {
+	width:96%;
+	margin: 0px auto;
+	margin-top:10px;
+}
+
+.cd-nav-box ul li {
+	float:left;
+	text-align:center;
+	font-size:15px;
+	line-height:20px;
+	font-weight:bold;
+	height:20px;
+}
+
+.cd-box ul li {
+	width: 96%;
+	margin: 0px auto;
+}
+
+.cd-c-box {
+	float: left;
+	margin: 0px auto;
+	margin-bottom:10px;
+	padding: 10px 0px;
+	border-bottom: 1px dashed #999;
+}
+
+.cd-c-box .cd-c-choose {
+	float: left;
+	width: 40px;
+	margin-top: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cd-c-box .cd-c-pic {
+	margin: auto 5px;
+	float: left;
+	width: 120px;
+	height: 120px;
+	border: 1px solid #ddd;
+}
+
+.cd-c-box .cd-c-pic img {
+	padding: 10px 10px;
+	width: 100px;
+	height: 100px;
+}
+.cd-c-box .cd-c-detail {
+	margin: 6px 5px;
+	float: left;
+	width: 220px;
+}
+
+.cd-c-box .cd-c-intro {
+	margin: 0px 5px;
+	margin-top: 15px;
+	float: left;
+	width: 500px;
+}
+
+.cd-c-box .cd-c-op {
+	margin-top: 40px;
+	margin-left: 30px;
+	float: left;
+	width: 60px;
+}
+
+.cd-c-box .cd-c-detail .cd-c-name {
+	font-size: 18px;
+	color: rgb(209, 0, 0);
+}
+
+.cd-c-box .cd-c-detail p {
+	padding: 5px 5px;
+}

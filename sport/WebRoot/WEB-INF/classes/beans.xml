@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 启用spring注解 -->
+	<context:annotation-config />
+	<!-- 定义注解自动扫描的包，包括所有子包 -->
+	<context:component-scan base-package="com.sport" />
+	<!-- 启用aspectj切面代理,用于声明式事务管理 -->
+	<aop:aspectj-autoproxy />
+	<!-- 从property文件中读取数据库连接配置信息 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="classpath:jdbc.properties" />
+	</bean>
+	<!-- 这里采用c3p0数据库连接池 -->
+	<bean id="dataSource" destroy-method="close"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!--连接池中保留的最小连接数。 -->
+		<property name="minPoolSize" value="15" />
+		<!--连接池中保留的最大连接数。Default: 15 -->
+		<property name="maxPoolSize" value="60" />
+		<!--最大空闲时间,1800秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="1800" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement" value="6" />
+		<property name="maxStatements" value="1000" />
+		<property name="initialPoolSize" value="15" />
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod" value="60" />
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts" value="30" />
+		<property name="breakAfterAcquireFailure" value="false" />
+		<property name="testConnectionOnCheckout" value="false" />
+	</bean>
+	<!-- 初始化一个hibernate的会话管理器（注解方式），它将管理一切与数据库相关的操作 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.sport.entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.connection.provider_class
+				=org.hibernate.connection.C3P0ConnectionProvider
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.show_sql=true
+				hibernate.format_sql=true
+				hibernate.hbm2ddl.auto=update
+				<!-- hibernate.current_session_context_class=org.springframework.orm.hibernate3.SpringSessionContext -->
+			</value>
+		</property>
+	</bean>
+	<!-- 初始化hibernate的声明式事务管理类 ，并由它来管理sessionFactory-->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 切面配置 -->
+	<aop:config>
+		<!-- 声明一个切面 -->
+		<aop:pointcut id="userServiceMethod"
+			expression="execution(public * com.sport.service..*.*(..))" />
+		<!-- 将上面的切面与切面逻辑相关联 -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="userServiceMethod" />
+	</aop:config>
+	<!-- 利用事务管理器对切面镜像管理 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 初始化一个封装了一些通过hibernate对数据库的 一些基本操作，以简化编程！-->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

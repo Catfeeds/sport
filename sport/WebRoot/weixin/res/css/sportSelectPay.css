@@ -1,0 +1,145 @@
+﻿@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+#header, #content , #footer {
+	width: 100%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+/******************************  top banner  ********************************/
+
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+
+/******************************  detail list  ********************************/
+
+.detailBox {
+	border-width: 1px 0 1px 0;
+	background-color: #fff;
+	margin-bottom: 12px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.detailBox h2{
+	color: #f60;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	margin-left: 1%;
+	padding: 5px 10px;
+}
+
+.orderdetailContentTable {
+    margin-left: 1%;
+    width: 98%;
+    border: 1px solid #ddd;
+}
+
+.orderdetailContentTable tr {
+	height: 25px;
+}
+
+.orderdetailContentTable tr, .orderdetailContentTable td,.orderdetailContentTable th {
+    font-size: 14px;
+    padding: 5px 5px ;
+}
+
+.orderdetailContentTable th {
+	font-weight: normal;
+	width: 80px;
+}
+
+.orderdetailPlace li {
+	font-size: 14px;
+}
+
+.orderdetailDate {
+    color: #f60;
+}
+
+.orderdetailPrice{
+	color: #f60;
+}
+
+.detailPriceBox {
+	border-width: 1px 0 1px 0;
+	background-color: #fff;
+	margin-bottom: 12px;
+	width: 100%;
+	overflow: hidden;
+	margin-top: -8px;
+}
+
+/******************************  select pay  ********************************/
+
+.selectPayBox {
+	width: 99%;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+
+.selectPayBox ul li {
+	float: left;
+	border: 1px solid #ddd;
+}
+
+.payType {
+	float: left;
+	width: 98%;
+	margin: 0px auto;
+}
+
+.payPic {
+	margin-left: 60px;
+	margin-top: 5px;
+}
+
+.payPic img {
+	width: 150px;
+	height: 40px;
+}
+
+
+.payBtn input{
+	height: 20px;
+	width: 20px;
+	border: 1px solid red;
+	float: left;
+	margin: 15px 0px 0px 20px ;
+
+}
+/******************************  confirm btn  ********************************/
+.confirmOrder {
+	margin: 0px auto;
+	margin-top: 20px;
+	width: 290px;
+}
+
+.confirmOrder .confirmBtn a {
+	padding: 12px 110px;
+	background: #f60;
+	color: #fff;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+}

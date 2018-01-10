@@ -1,0 +1,121 @@
+body{
+	margin:0px;
+	padding:0px;
+}
+
+.merchantsSettled{
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: #333;
+	width: 430px;
+	height: 900px;
+}
+
+.merchantsSettled .enterInfo{
+	width: 430px;
+	height: auto;
+	margin: 15px auto;
+	vertical-align: middle;
+}
+
+.enterInfo .titdiv{
+	width:130;
+	font-size: 16px;
+	margin:8px 0;
+}
+.enterInfo input{
+	margin-left:50px;
+	width: 250px;
+	line-height:25px;
+	font-size: 14px;
+	color: #333;
+}
+
+.enterInfo select{
+	width: auto;
+	padding:0 5px;
+	height:30px;
+	font-size: 14px;
+	color: #333;
+}
+.enterInfo textarea{
+	
+}
+
+
+.submit{
+	width: 130px;
+	height: 35px;
+	border: 0px;
+	border-radius: 5px;
+	color: #fff;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	background-color: #0066ff;
+}
+
+.sizeOfInput{
+	width: 300px;
+}
+
+.flowChat{
+	width: 380px;
+	height: 700px;
+	border-right:#09F;
+	border-style:dashed;
+	border-left:none;
+	border-top:none;
+	border-bottom:none;
+}
+
+.flowChat img{
+	width: 380px;
+	height:650px;
+}
+
+.merchantsSettledBox{
+	width: 1000px;
+	height: 880px;
+	margin: 5px auto;
+	margin-top: 10px;
+}
+
+.logoImg{
+	width: 320px;
+	
+	margin-right:20px;
+	
+	
+}
+
+/*上传按钮美化*/
+.btns{
+	position:relative;
+}
+
+.btns input{
+	width:130px;
+	height:30px;
+	background-color: #0099ff;
+	border-color: #0099ff;
+	color: #fff;
+}
+
+.btns .btn_file_molding{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	border:0 none;
+	filter:alpha(opacity=0);
+	opacity:0;
+
+}
+
+
+	.wrong+span{
+ 		color:#f00;
+ 		font-size:12px;
+ 		letter-spacing:1px;
+ 		margin-left:10px;
+ 	}	

@@ -1,0 +1,56 @@
+
+.productTypeDetail {
+	float: left;
+	width:700px;
+	padding-left:30px;
+	border-top:1px solid rgb(222,222,222);
+}
+
+.addChildType,li.addChildType a {
+	color: red;
+}
+//添加分类布局
+.addType{
+	padding:0;
+	width:100%;
+}
+.addType .title{
+	width:100%;
+	text-align:center;
+	color:rgb(34,46,46);
+	font-size:24px;
+	font-weight:bolder;
+	margin-bottom:30px;
+}
+.addType .content{
+	width:100%;
+	margin-bottom:30px;
+	
+}
+.addType .content .item{
+	float:left;
+}
+.lastitem{
+	display:block;
+	height:80px;
+	clear:right;
+}
+.addType .content .item .selectContent{
+	float:left;
+	margin:15px 2px;
+}
+.addType .content .item .operateBtn{
+	float:left;
+	margin-right:20px;
+}
+.addType .content .item .operateBtn input{
+	float:none;
+	margin-bottom:10px;
+}
+.middle{
+	width:80px;
+	height:30px;
+}
+td{
+	text-align:center;
+}

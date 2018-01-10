@@ -1,0 +1,53 @@
+/******下标页码******/
+.pagination{
+padding: 20px 0;
+max-width:800px;
+margin:0 auto;
+text-align:center;
+}
+
+.pagination ul{
+margin: 0;
+padding: 0;
+text-align: left  !important; /*Set to "right" to right align pagination interface*/
+font-size: 16px;
+}
+
+.pagination ul li{
+list-style-type: none  !important;;
+display: inline;
+padding-bottom: 1px;
+margin-left:2px;
+}
+
+.pagination ul li a, .pagination ul li a:visited{
+padding: 0 5px;
+border: 1px solid #9aafe5;
+text-decoration: none; 
+color: #2e6ab1  !important;;
+}
+
+.pagination ul li a:hover, .pagination ul li a:active{
+border: 1px solid #2b66a5;
+color: #000  !important;;
+background-color: lightyellow  !important;;
+}
+
+.pagination ul li.currentpage{
+font-weight: bold;
+padding: 0 5px;
+border: 1px solid navy;
+color:rgb(248,248,248); 
+background: #2e6ab1  !important;;
+
+}
+
+.pagination ul li.disablepage{
+padding: 0 5px !important;
+border: 1px solid #929292 !important;
+color: #929292  !important;
+}
+
+.pagination ul li.nextpage{
+font-weight: bold;
+}

@@ -1,0 +1,38 @@
+body{
+	text-align:left;
+	
+	font:normal 16px/16px 'Microsoft JhengHei','Microsoft YaHei', Arial, sans-serif; color:#333333;
+}
+.unloadProductWrap{
+	width:900px;
+	margin:0 auto;
+}
+.uploadFormWrap{
+	clear:both;
+	padding-bottom:300px;
+}
+.uploadItem{
+	margin:5px 0;
+	width:300px;
+	float:left;
+}
+.lists{
+	width:880px;
+}
+
+.itemIitle{
+	width:100px;
+	float:left;
+	line-height:28px;
+}
+.itemContent{
+	width:200px;
+	float:left;
+}
+.uploadItemBtn{
+	margin:10px auto;
+	
+}
+.listItemContent .item{
+	float:left;
+}

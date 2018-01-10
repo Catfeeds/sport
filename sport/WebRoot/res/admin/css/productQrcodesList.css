@@ -1,0 +1,86 @@
+.addType{
+	text-align:center;
+	
+}
+.addType .title{
+	width:100%;
+	text-align:center;
+	color:rgb(34,46,46);
+	font-size:24px;
+	font-weight:bolder;
+	margin-bottom:30px;
+	border-bottom:1px solid rgb(222,222,222);
+}
+.productTypeLists{
+	width:80%;
+	margin:0 auto;
+	overflow:hidden;	
+}
+.productTypeLists .item{
+	float:left;
+	text-align:left;
+}
+/********产品二维码压缩包列表布局********/
+.qrcodeZipListWrap{
+	width:100%;
+	height:auto;
+}
+.productTypePath{
+	width:100%;
+	text-align:left;
+}
+.ImagessList{
+	width:90%;
+	height:auto;
+	margin:10px auto;
+}
+.ImagessList .item{
+	width:100%;
+	padding:10px;
+	height:100px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	border-bottom:1px solid rgb(222,222,222);
+}
+.ImagessInfoWrap{
+	width:98%;
+	height:80px;
+}
+.productInfoWrap{
+	width:100%;
+	clear:both;
+	margin-bottom:10px;
+}
+.productImg{
+	float:left;
+	height:50px;
+	width:50px;
+}
+.productImg a img{
+	max-width:50px;
+	max-height:50px;
+	overflow:auto;
+}
+.imagessContent{
+	margin-left:10px;
+}
+.imagessContent .zipName a img{
+	max-witdh:20px;
+	max-height:20px;
+	margin-top:5px;
+	margin-right:5px;
+}
+/********美化********/
+.zipContentStyle{
+	color:red;
+	font-weight:bold;
+}
+.contentStyle{
+	color:black;
+	font-weight:bold;
+}
+.productTypePath{
+	font-size:12px;
+	font-weight:normal;
+	color:black;
+}

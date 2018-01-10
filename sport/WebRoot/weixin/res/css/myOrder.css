@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+p {padding:2px 0px;margin:0px;border:0px dashed red;}
+
+hr {margin:2px 0px;}
+
+#header, #content , #footer {
+	width: 99%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+.topbanner {
+	background:#3cf;
+	color:#fff;
+	text-align:center;
+	height:40px;
+	line-height:40px;
+}
+
+.discountListBox {
+	width:95%;
+	margin:0px auto;
+	margin-bottom: 60px;
+}
+
+.discountList li {
+	font-size:16px;
+	line-height:1.5em;
+	vertical-align:middle;
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+.discountList li {
+	overflow:hidden;
+	border:1px solid #d0d1d4;
+	margin: 10px auto;
+	padding: 8px 8px;
+	background: url(../image/bottom.png) repeat-x scroll left bottom #FFFFFF;
+	background-size:2px auto;
+}
+
+.discountList li p span {
+	color:#69f;
+}
+
+.discountList li p .timec {
+	color:#f60;
+}

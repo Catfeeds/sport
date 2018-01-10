@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.multipart.maxSize" value="5242880"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.locale" value="utf-8"></constant>
+	<constant name="struts.url.includeParams" value="none"></constant>
+	<!-- 动态调用action的方法 和通配符*的使用 -->
+	
+	<package name="test" namespace="/"
+		extends="struts-default">
+		<global-results>
+			<result name="login">login.jsp</result>	
+			<result name="register">register.jsp</result>
+			<result name="registerOk">registerOk.jsp</result>
+			<result name="registerFailed">registerFailed.jsp</result>		
+			<result name="index">index.jsp</result>
+			<result name="chooseProduct">chooseProduct.jsp</result>
+			<result name="companyRegisterOk">companyRegisterOk.jsp</result>
+			<result name="companysInfo">companysInfo.jsp</result>
+			<result name="userDetail">userDetail.jsp</result>
+			<result name="userHome">userHome.jsp</result>
+			<result name="payOrder">payOrder.jsp</result>
+			<result name="submitedCoachOrder">submitedCoachOrder.jsp</result>
+			<result name="submitOrder">submitOrder.jsp</result>
+			<result name="payCoachOrder">payCoachOrder.jsp</result>
+			<result name="payedCoachOrder">payedCoachOrder.jsp</result>
+			<result name="payCoachFailed">payCoachFailed.jsp</result>
+			<result name="payFailed">payFailed.jsp</result>
+			<result name="choosePlace">choosePlace.jsp</result>
+			<result name="chooseCoach">chooseCoach.jsp</result>
+			<result name="refoundDetail">refoundDetail.jsp</result>
+			<result name="refound">refound.jsp</result>
+			<result name="discountList">discountList.jsp</result>
+			<result name="alterDiscount">showDiscountDetail.jsp</result>
+			<result name="userArticleList">userArticleList.jsp</result>
+			<result name="userCaredForum">userCaredForum.jsp</result>
+			<result name="error">commonPages/serverError.jsp</result>
+			<result name="prompt">commonPages/prompt.jsp</result>
+			<result name="noRight">commonPages/noRight.jsp</result>
+			<result name="serverError">commonPages/serverError.jsp</result>
+			<!-- <result name="*">index.jsp</result> -->
+		</global-results>
+		
+		<global-exception-mappings >
+			<exception-mapping result="login" exception="org.apache.shiro.authz.AuthorizationException"></exception-mapping>
+			<exception-mapping result="prompt" exception="com.sport.exception.PromptException"></exception-mapping>
+			<exception-mapping result="serverError" exception="com.sport.exception.ServerErrorException"></exception-mapping>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		<action name="*and*" class="{1}Action" method="{2}">
+			<result name="index" type="redirect">
+			  <param name="location">index</param>
+			  <param name="parse">false</param>
+			</result>
+			<result name="{2}">{2}.jsp</result>	
+			<!-- 最大不超过5M -->	
+			<interceptor-ref name="defaultStack">				
+				<param name="fileUpload.maximumSize">5242880</param>
+				<param name="fileUpload.allowedExtensions">txt,zip,7z,tiff,psd,svg,pcx,dxf,emf,lic,tga,rar,doc,docx,xls,xlsx,png,gif,bmp,jpg,jpeg,pdf</param>
+			</interceptor-ref>	 
+		</action>
+		<action name="*" class="frontJspAction" method="{1}">
+			<result name="{1}">{1}.jsp</result>
+		</action>	
+				 			
+	</package>
+		<package name="forum" namespace="/forum"
+		extends="struts-default">
+		<global-results>			
+			<result name="typeForum">typeForum.jsp</result>
+			<result name="articleDetail">articleDetail.jsp</result>
+			<result name="forumIndex">forumIndex.jsp</result>
+			<result name="toTypeForum" type="redirect">
+				<param name="location">articleandtypeForum</param>
+			 	<param name="forum.id">${forum.id}</param>
+			</result>
+			<result name="toArticleDetail" type="redirect">
+				<param name="location">articleandarticleDetail</param>
+			 	<param name="rootArticle.id">${rootArticle.id}</param>
+			</result>
+			<result name="error">../commonPages/serverError.jsp</result>
+			<result name="prompt">../commonPages/prompt.jsp</result>
+			<result name="noRight">../commonPages/noRight.jsp</result>
+			<result name="serverError">../commonPages/serverError.jsp</result>
+			<!-- <result name="*">index.jsp</result> -->
+		</global-results>
+		
+		<global-exception-mappings >
+			<exception-mapping result="login" exception="org.apache.shiro.authz.AuthorizationException"></exception-mapping>
+			<exception-mapping result="prompt" exception="com.sport.exception.PromptException"></exception-mapping>
+			<exception-mapping result="serverError" exception="com.sport.exception.ServerErrorException"></exception-mapping>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		<action name="*and*" class="{1}Action" method="{2}">
+			<result name="index" type="redirect">
+			  <param name="location">index</param>
+			  <param name="parse">false</param>
+			</result>
+			<result name="{2}">{2}.jsp</result>	
+			<!-- 最大不超过5M -->	
+			<interceptor-ref name="defaultStack">				
+				<param name="fileUpload.maximumSize">5242880</param>
+				<param name="fileUpload.allowedExtensions">txt,zip,7z,tiff,psd,svg,pcx,dxf,emf,lic,tga,rar,doc,docx,xls,xlsx,png,gif,bmp,jpg,jpeg,pdf</param>
+			</interceptor-ref>	 
+		</action>		
+	</package>
+	<package name="weixin" namespace="/weixin"
+		extends="struts-default">
+		<global-results>
+			<result name="login">login.jsp</result>	
+			<result name="register">register.jsp</result>
+			<result name="registerOk">registerOk.jsp</result>
+			<result name="registerFailed">registerFailed.jsp</result>		
+			<result name="index">index.jsp</result>
+			<result name="chooseProduct">chooseProduct.jsp</result>
+			<result name="companyRegisterOk">companyRegisterOk.jsp</result>
+			<result name="companysInfo">companysInfo.jsp</result>
+			<result name="userDetail">userHome.jsp</result>
+			<result name="userHome">userHome.jsp</result>
+			<result name="payOrder">payOrder.jsp</result>
+			<result name="payCoachFailed">payCoachFailed.jsp</result>
+			<result name="payFailed">payFailed.jsp</result>
+			<result name="submitedCoachOrder">submitedCoachOrder.jsp</result>
+			<result name="submitOrder">submitOrder.jsp</result>
+			<result name="choosePlace">choosePlace.jsp</result>
+			<result name="chooseCoach">chooseCoach.jsp</result>
+			<result name="coachLogin">coachLogin.jsp</result>
+			<result name="refoundDetail">refoundDetail.jsp</result>
+			<result name="refound">refound.jsp</result>
+			<result name="discountList">discountList.jsp</result>
+			<result name="alterDiscount">showDiscountDetail.jsp</result>
+			<result name="typeForum">typeForum.jsp</result>
+			<result name="articleDetail">articleDetail.jsp</result>
+			<result name="forumIndex">forumIndex.jsp</result>
+			<result name="toTypeForum" type="redirect">
+				<param name="location">articleandtypeForum</param>
+			 	<param name="forum.id">${forum.id}</param>
+			</result>			
+			<result name="toArticleDetail" type="redirect">
+				<param name="location">articleandarticleDetail</param>
+			 	<param name="rootArticle.id">${rootArticle.id}</param>
+			</result>
+			<result name="userArticleList">userArticleList.jsp</result>
+			<result name="userCaredForum">userCaredForum.jsp</result>
+			<result name="addArticle">addArticle.jsp</result>
+			<result name="toReplyArticleList" type="redirect">
+				<param name="location">articleandreplyArticleList</param>
+			 	<param name="rootArticle.parentArticle.id">${rootArticle.parentArticle.id}</param>
+			</result>
+			<result name="errorWeixin">../commonPages/serverError.jsp</result>
+			<result name="promptWeixin">prompt.jsp</result>
+			<result name="noRight">../commonPages/noRight.jsp</result>
+			<result name="serverErrorWeixin">../commonPages/serverError.jsp</result>
+			<!-- <result name="*">index.jsp</result> -->
+		</global-results>
+		
+		<global-exception-mappings >
+			<exception-mapping result="login" exception="org.apache.shiro.authz.AuthorizationException"></exception-mapping>
+			<exception-mapping result="promptWeixin" exception="com.sport.exception.PromptException"></exception-mapping>
+			<exception-mapping result="serverErrorWeixin" exception="com.sport.exception.ServerErrorException"></exception-mapping>
+			<exception-mapping result="errorWeixin" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		<action name="*and*" class="{1}Action" method="{2}">
+			<result name="index" type="redirect">
+			  <param name="location">index</param>
+			  <param name="parse">false</param>
+			</result>
+			<result name="{2}">{2}.jsp</result>	
+			<!-- 最大不超过5M -->	
+			<interceptor-ref name="defaultStack">				
+				<param name="fileUpload.maximumSize">5242880</param>
+				<param name="fileUpload.allowedExtensions">txt,zip,rar,doc,docx,xls,xlsx,png,gif,bmp,jpg,jpeg,pdf</param>
+			</interceptor-ref>	 
+		</action>
+		<action name="*" class="weixinAction" method="{1}">
+			<result name="{1}">{1}.jsp</result>
+		</action>			 			
+	</package>
+	
+	<package name="admin" namespace="/admin"
+		extends="struts-default">
+		<!-- 全局返回的result与页面相关联 -->
+		<global-results>
+			<result name="login">login.jsp</result>
+			<result name="index" >index.jsp</result>
+			<result name="productTypes">operateProductType.jsp</result>
+			<result name="addressList">operateAddress.jsp</result>
+			<result name="addProductType">operateProductType.jsp?operate=add</result>
+			<result name="deleteProductType">operateProductType.jsp?operate=delete</result>
+			<result name="updateProductType">operateProductType.jsp?operate=update</result>
+			<result name="addProducts">uploadProducts.jsp</result>
+			<result name="placeProductDetail">placeProductDetail.jsp</result>
+			<result name="addPlaceProduct">addPlaceProduct.jsp</result>
+			<result name="placeProductList">placeProductList.jsp</result>
+			<result name="coachProductDetail">coachProductDetail.jsp</result>
+			<result name="addCoachProduct">addCoachProduct.jsp</result>
+			<result name="coachProductList">coachProductList.jsp</result>
+			<result name="addManager">addManager.jsp</result>			
+			<result name="managerList">managerList.jsp</result>
+			<result name="managerDetail">managerDetail.jsp</result>
+			<result name="userList">userList.jsp</result>
+			<result name="userDetail">userDetail.jsp</result>
+			<result name="companyList">companyList.jsp</result>
+			<result name="companyDetail">companyDetail.jsp</result>
+			<result name="articleDetail">articleDetail.jsp</result>
+			<result name="articleList">articleList.jsp</result>
+			<result name="addCoach">addCoach.jsp</result>
+			<result name="coachDetail">coachDetail.jsp</result>
+			<result name="coachList">coachList.jsp</result>
+			<result name="coachProductDetail">coachProductDetail.jsp</result>
+			<result name="coachProductList">coachProductList.jsp</result>
+			<result name="placeProductDetail">placeProductDetail.jsp</result>
+			<result name="placeProductList">placeProductList.jsp</result>
+			<result name="forumDetail">forumDetail.jsp</result>
+			<result name="forumList">forumList.jsp</result>
+			<result name="levelDetail">levelDetail.jsp</result>
+			<result name="levelList">levelList.jsp</result>
+			<result name="alterLevel">alterLevel.jsp</result>
+			<result name="orderDetail">orderDetail.jsp</result>
+			<result name="orderList">orderList.jsp</result>
+			<result name="addSite">addSite.jsp</result>
+			<result name="siteDetail">siteDetail.jsp</result>
+			<result name="siteList">siteList.jsp</result>
+			<result name="placeList">placeList.jsp</result>
+			<result name="refoundDetail">refoundDetail.jsp</result>
+			<result name="refoundList">refoundList.jsp</result>
+			<result name="discountList">discountList.jsp</result>
+			<result name="alterDiscount">alterDiscount.jsp</result>
+			<result name="addForum">addForum.jsp</result>
+			<result name="forumDetail">forumDetail.jsp</result>
+			<result name="forumList">forumList.jsp</result>
+			<result name="eventDetail">alterEvent.jsp</result>
+			<result name="eventList">eventList.jsp</result>
+			<result name="deleteEventSuccess">deleteEventSuccess.jsp</result>
+			<result name="error">../commonPages/serverError.jsp</result>
+			<result name="prompt">../commonPages/prompt.jsp</result>
+			<result name="serverError">../commonPages/serverError.jsp</result>
+			<result name="noRight">../commonPages/noRight.jsp</result>
+			<result name="*">../index.jsp</result>	
+		</global-results>
+		<!-- 全局声明式异常捕获 -->
+		<global-exception-mappings>
+			<exception-mapping result="noRight" exception="org.apache.shiro.authz.AuthorizationException"></exception-mapping>
+			<exception-mapping result="prompt" exception="com.sport.exception.PromptException"></exception-mapping>
+			<exception-mapping result="serverError" exception="com.sport.exception.ServerErrorException"></exception-mapping>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		<!-- action的配置 -->		
+		<action name="*and*" class="{1}Action" method="{2}">
+			<result name="{2}">{2}.jsp</result>			
+		</action>	
+		
+	</package>
+</struts>

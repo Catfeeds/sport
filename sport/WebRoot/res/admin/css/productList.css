@@ -1,0 +1,240 @@
+.addType{
+	text-align:center;
+	
+}
+.addType .title{
+	width:100%;
+	text-align:center;
+	color:rgb(34,46,46);
+	font-size:24px;
+	font-weight:bolder;
+	margin-bottom:30px;
+	border-bottom:1px solid rgb(222,222,222);
+}
+.productTypeLists{
+	width:80%;
+	margin:0 auto;
+	overflow:hidden;	
+}
+.productTypeLists .item{
+	float:left;
+	text-align:left;
+}
+/********产品列表布局********/
+.productListWrap{
+	width:90%;
+	height:auto;
+	margin:0 auto;
+	border:2px solid rgb(222,222,222);
+}
+
+.productList{	
+	FONT-FAMILY: Verdana, Arial, sans-serief;
+	FONT-SIZE: 12px;
+	color: #666666;
+}
+
+.productList .item{
+	width:100%;
+	height:160px;
+	padding:10px;
+	padding-bottom:2px;
+	overflow:hidden;
+	border-bottom:1px solid rgb(222,222,222);
+}
+.productInfoWrap{
+	width:100%;
+	height:120px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.productBaseInfoWrap{
+	float:left;
+	width:50%;
+}
+.productOperate{
+	width:100%;
+	height:30px;
+	text-align:center;
+	overflow:hidden;
+}
+.productOperate .chooseBox{
+	float:left;
+}
+.productList .item .productImg a img{
+	max-width:100px;
+	max-height:100px;
+	padding:10px;
+	border:0px;
+}
+.productImg,.productInfo{
+	float:left;
+	
+}
+.productDetailWrap{
+	float:right;
+	text-align:left;
+	height:100px;
+	width:20%;
+	padding:10px;
+	padding-bottom:0px;
+	overflow: hidden;	
+}
+.productDetail{
+	
+}
+.moreInfo{
+	float:right;
+	color:red;
+}
+.productInfo{
+	width:60%;
+	margin-left:5px;
+	margin-top:0px;
+}
+
+.productName{
+	width:100%;
+	text-align:center;
+}
+/********美化********/
+.moneyStyle{
+	color:red;
+	font-weight:bold;
+}
+.contentStyle{
+	color:black;
+	font-weight:bold;
+}
+.productTypePath{
+	font-size:14px;
+	font-weight:bold;
+	color:black;
+	background:rgb(222,222,222);
+}
+/*******下载框********/
+.downloadShow{
+	z-index:99;
+	position:fixed;
+	display:block;
+	top:56%;
+	left:30%;
+	width:400px;
+	height:240px;
+	background-color:rgb(172,172,172);
+	border:4px solid rgb(222,222,222);
+}
+.downloadHide{
+	display:none;
+}
+#downloadDialog{
+	
+	
+}
+.submitBox {
+		width:400px;
+		margin:0px auto;
+	}
+
+	.fileName {
+		position: relative;
+		overflow: hidden;
+		zoom: 1;
+		margin-bottom: 5px;
+		margin-top:15px;
+		
+	}
+	
+	.fileName .alignRight {
+		float: left;
+		width: 150px;
+		color: #333;
+		text-align: right;
+		margin-right: 5px;
+	}
+
+	.fileName .alignRight b{
+		display: inline-block;
+		width: 6px;
+		color: #b10000;
+		padding: 0 2px;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.alignRight label b {
+		color: #b10000;
+		display: inline-block;
+		padding: 0 0 0 2px;
+		vertical-align: middle;
+		width: 6px;
+		text-align: center;
+	}
+
+	.alignLeft {
+		float:left;
+			
+	}
+
+	.downloadBox {
+		width:310px;	
+		margin:0px auto;
+	}
+
+	.downloadBox ul {
+		margin:0px;
+		padding:0px;
+	}
+
+	.downloadBox ul li{
+		list-style-type:none;
+		height:30px;
+		line-height:30px;
+		width:300px;
+		text-align:left;
+		margin:0px auto;
+	}
+
+	.downloadBox li .blue {
+		color: #D9EEF7;
+		border: 1px solid #0076A3;
+		background: transparent -moz-linear-gradient(center top , #00ADEE, #0078A5) repeat scroll 0% 0%;
+	}
+
+	.downloadBox li .blue:hover {
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+	}
+
+	.downloadBox li .blue:active {
+		color: #80bed6;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+		background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+	}
+
+	.bigrounded {
+		border-radius: 2em;
+	}
+
+	.downloadBox li .button {
+		display: inline-block;
+		vertical-align: baseline;
+		margin: 0px 2px;
+		outline: medium none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		font: 14px/100% Arial,Helvetica,sans-serif;
+		padding: 0.5em 2em 0.55em;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+		border-radius: 0.5em;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	a {
+		color: #339;
+		text-decoration: none;
+	}

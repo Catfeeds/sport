@@ -1,0 +1,56 @@
+
+.addressDetail {
+	float: left;
+	width:700px;
+	padding-left:30px;
+	border-top:1px solid rgb(222,222,222);
+}
+
+.addChildAddress,li.addChildAddress a {
+	color: red;
+}
+//添加分类布局
+.addAddress{
+	padding:0;
+	width:100%;
+}
+.addAddress .title{
+	width:100%;
+	text-align:center;
+	color:rgb(34,46,46);
+	font-size:24px;
+	font-weight:bolder;
+	margin-bottom:30px;
+}
+.addAddress .content{
+	width:100%;
+	margin-bottom:30px;
+	
+}
+.addAddress .content .item{
+	float:left;
+}
+.lastitem{
+	display:block;
+	height:80px;
+	clear:right;
+}
+.addAddress .content .item .selectContent{
+	float:left;
+	margin:15px 2px;
+}
+.addAddress .content .item .operateBtn{
+	float:left;
+	margin-right:20px;
+}
+.addAddress .content .item .operateBtn input{
+	float:none;
+	margin-bottom:10px;
+}
+.middle{
+	width:80px;
+	height:30px;
+}
+td{
+	text-align:center;
+}

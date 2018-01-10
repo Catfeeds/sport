@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, "微软雅黑"; 
+	font-size: 12px;
+}
+
+/*********************  footerbanner **********************/
+.footerbanner { 
+	width: 1000px;
+	text-align: center;
+	font-size: 12px;
+	margin:0px auto;
+} 
+
+.footerbanner .footerbannerBar {
+	background-color: #336699;
+	width: 1000px;
+	height: 1px;
+	
+}
+
+.footerbannerInfo {
+	width: 860px;
+	height: 100px;
+	margin: 0px auto;
+}
+
+.footerbannerInfoBox {
+	margin-top:10px;
+	height: 80px;
+	border-right: 2px dotted #666;
+	padding-top: 10px;
+	float: left;
+}
+
+.footerbannerInfoBox a{
+	color: #666;
+	text-decoration: none;
+}
+
+.footerbannerInfoBox a:hover{
+	color: rgb(209, 0, 0);
+}
+
+.footerbannerInfoLeft{
+	width: 120px;
+}
+
+.footerbannerInfoRight{	
+	width: 240px;
+}
+
+.footerbannerInfoRightOne{	
+	width: 240px;
+	border-right: none;
+}
+
+.footerbannerInfoBox ul li {
+	height: 22px;
+	line-height: 22px;
+}
+
+.footerbannerInfoQrcode img{
+	width: 70px;
+	height: 70px;
+}
+
+
+
+.footerbannerInfoQrcode {
+	float: left;
+	margin-left: 10px;
+}
+
+.footerbannerInfoQrcodeWord {
+	margin-top:20px;
+	color: #666;
+}
+
+.footerbannerInfoQrcodeWord span {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+}
+	
+.footerbannerInfoPhone .footerbannerInfoPhoneIcon img {
+	width: 20px;
+	height: 20px;
+}
+
+.footerbannerInfoPhoneIcon, .footerbannerInfoPhoneNumber{
+	margin-left: 10px;
+}
+
+.footerbannerInfoPhone {
+	width: 240px;
+}
+
+.footerbannerInfoPhone,.footerbannerInfoPhoneIcon,.footerbannerInfoPhoneNumber {
+	float: left;
+}
+
+.footerbannerInfoPhoneNumber span {
+	font-weight: bold;
+	font-size: 14px;
+	color: #666;
+	line-height: 20px;
+}
+
+
+.footerbannerInfoTime .footerbannerInfoTimeIcon img {
+	width: 20px;
+	height: 20px;
+}
+
+.footerbannerInfoTimeIcon, .footerbannerInfoTimeTable{
+	margin-left: 10px;
+}
+
+.footerbannerInfoTime {
+	width: 240px;
+}
+
+.footerbannerInfoTime,.footerbannerInfoTimeIcon,.footerbannerInfoTimeTable {
+	float: left;
+}
+
+.footerbannerInfoTimeTable span {
+	font-weight: bold;
+	font-size: 14px;
+	color: #666;
+	line-height: 20px;
+}
+
+.footerbannerInfoTimeTableTwo {
+	margin-left: 10px;
+}
+
+
+
+.footerbannerCopy {
+	width: 1000px;
+	margin: 0px auto;
+	height: 25px;
+	color: #666;
+	line-height: 25px;
+	text-align: center;
+}
+
+.footerbannerAuthor{
+	width: 1000px;
+	margin: 0px auto;
+	height: 25px;
+	color: #666;
+	line-height: 25px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.footerbannerAuthor a{
+	color: #666;
+	text-decoration: none;
+}
+
+.footerbannerAuthor a:hover{
+	color: rgb(209, 0, 0);
+}

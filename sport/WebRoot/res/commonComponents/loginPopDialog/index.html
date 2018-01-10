@@ -1,0 +1,163 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login in</title>
+
+
+<link rel="stylesheet" href="css/loginbox.css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/popLoginDialog.js" ></script>
+<script>
+	$(function($){
+	var $form_modal = $('.cd-user-modal'),
+		$form_login = $form_modal.find('#cd-login'),
+		$form_signup = $form_modal.find('#cd-signup'),
+		$form_modal_tab = $('.cd-switcher'),
+		$tab_login = $form_modal_tab.children('li').eq(0).children('a'),
+		$tab_signup = $form_modal_tab.children('li').eq(1).children('a');
+
+	//弹出窗口
+	$(".ck").bind("click",function(){
+		$form_modal.addClass('is-visible');	
+		login_selected();
+	});
+
+	//关闭弹出窗口
+	$('.cd-user-modal').on('click', function(event){
+		if( $(event.target).is($form_modal) || $(event.target).is('.cd-close-form') ) {
+			$form_modal.removeClass('is-visible');
+		}	
+	});
+	//使用Esc键关闭弹出窗口
+	$(document).keyup(function(event){
+    	if(event.which=='27'){
+    		$form_modal.removeClass('is-visible');
+	    }
+    });
+
+	//切换表单
+	$form_modal_tab.on('click', function(event) {
+		event.preventDefault();
+		( $(event.target).is( $tab_login ) ) ? login_selected() : signup_selected();
+	});
+
+	function login_selected(){
+		$form_login.addClass('is-selected');
+		$form_signup.removeClass('is-selected');
+		$form_forgot_password.removeClass('is-selected');
+		$tab_login.addClass('selected');
+		$tab_signup.removeClass('selected');
+	}
+
+	function signup_selected(){
+		$form_login.removeClass('is-selected');
+		$form_signup.addClass('is-selected');
+		$form_forgot_password.removeClass('is-selected');
+		$tab_login.removeClass('selected');
+		$tab_signup.addClass('selected');
+	}
+
+});
+
+</script>
+
+
+<script>
+var sends = {
+	checked:1,
+	send:function(){
+			var numbers = /^1[3|4|5|7|8][0-9]\d{4,8}$/;
+			var val = $(".phonenumber").val().replace(/\s+/g,""); //获取输入手机号码
+			if(!numbers.test(val) || val.length ==0){
+				alert("手机号码长度不对！");
+				return false;
+			}
+			if(numbers.test(val)){
+				var time = 120;
+				$('.div-phone a').addClass('darkblue').removeClass('blue').DISABLED;
+				function timeCountDown(){
+					if(time==0){
+						clearInterval(timer);
+						$('.div-phone a').addClass('blue').removeClass('darkblue').html("获取短信验证码");
+						sends.checked = 1;
+						return true;
+					}
+					$('.div-phone a').html(time+"S后再次发送");
+					time--;
+					return false;
+					sends.checked = 0;
+				}
+				$('.div-phone a').addClass('send0').removeClass('send1');
+				timeCountDown();
+				var timer = setInterval(timeCountDown,1000);
+			}
+	}
+}
+</script>
+
+
+</head>
+
+<body>
+
+
+	<a class="ck" href="javascript:void(0)">用户登录</a>
+	
+	<div class="cd-user-modal"> 
+		<div class="cd-user-modal-container">
+			<ul class="cd-switcher">
+				<li><a href="#0">用户登录</a></li>
+				<li><a href="#0">快速注册</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- 登录表单 -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signin-username">用户名</label>
+						<input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="请输入登陆账号、手机号码或者微信号">
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">密码</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="请输入密码">
+					</p>
+					
+					<p class="fieldset">
+						<input class="full-width2" type="submit" value="登 录">
+					</p>
+				</form>
+			</div>
+
+			<div id="cd-signup"> <!-- 注册表单 -->
+				<div class="div-phone">
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username cd-phone " for="signup-username">用户名</label>
+						<input class="full-width has-padding has-border phonenumber" id="signup-username" type="text" placeholder="请输入手机号码">
+					</p>
+					
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">密码</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="请输入密码">
+					</p>
+					
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-password">密码</label>
+						<input class="full-width3 has-padding has-border" id="signup-password" type="text"  placeholder="请输入短信验证码">
+						<a class="button blue msgcode"  onclick="sends.send();" >获取短信验证码</a>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width2" type="submit" value="注册新用户">
+					</p>
+				</form>
+				</div>
+			</div>
+
+			<a href="#0" class="cd-close-form">关闭</a>
+		</div>
+	</div> 
+
+</body>
+</html>

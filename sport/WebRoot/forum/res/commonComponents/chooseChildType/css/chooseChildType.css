@@ -1,0 +1,96 @@
+
+/* tabMenu */
+#tabMenu {
+	padding: 0 0 0 15px;
+	height: 32px;
+	overflow: hidden;
+}
+
+#tabMenu li {
+	float: left;
+	padding: 0px 10px 0 50px;
+	height: 32px;
+	width: auto;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 32px;
+	cursor: pointer;
+	cursor: hand
+}
+
+#tabMenu li.comments {
+	background: url(../images/inHome.png) no-repeat -0px -32px;
+}
+
+#tabMenu li.posts {
+	background: url(../images/ball.png) no-repeat 0 -32px;
+}
+
+#tabMenu li.category {
+	background: url(../images/outHome.png) no-repeat 0 -32px;
+}
+
+#tabMenu li.famous {
+	background: url(../images/other.png) no-repeat 0 -32px;
+}
+
+#tabMenu li.random {
+	background: url(../images/tabRandom.gif) no-repeat 0 -32px;
+}
+
+#tabMenu li.edu {
+	background: url(../images/edu.gif) no-repeat 0 -32px;
+}
+
+#tabMenu li.mouseover {
+	background-position: 0 0;
+}
+
+#tabMenu li.mouseout {
+	background-position: 0 -32px;
+}
+
+#tabMenu li.selected {
+	background-position: 0 0;
+}
+ul,li{
+	list-style:none;
+}
+/* box */
+.forumTypeWrap {
+	width: 988px;
+	margin: 0 auto;
+}
+
+.boxTop {
+	background: url(../images/boxTop.gif) no-repeat;
+	width:100%;
+	height: 11px;
+	overflow: hidden;
+}
+
+.boxBody {
+	background: url(../images/box.gif) repeat-y;
+	width:988px;
+	height: 170px;
+	overflow: hidden;
+}
+
+.boxBottom {
+	background: url(../images/boxBottom.gif) no-repeat;
+	height: 11px;
+	width:100%;
+	overflow: hidden;
+}
+.boxBody div.item{
+	display:none;
+}
+.boxBody div ul {
+	margin:0px;
+}
+
+.boxBody div li {
+	float: left;
+	height:80px;
+	width:188px;
+}

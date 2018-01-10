@@ -1,0 +1,20 @@
+
+a			{ text-decoration: none; color: #000000 }
+a:hover			{ text-decoration: underline }
+body			{ scrollbar-base-color: #F3F6FA; scrollbar-arrow-color: #4D76B3; font-size: 12px; background-color: #ffffff }
+table			{ font: 12px Verdana,Tahoma; color: #000000 }
+input,select,textarea	{ font: 11px Verdana,Tahoma; color: #000000; font-weight: normal; background-color: #F3F6FA }
+select			{ font: 11px Verdana,Tahoma; color: #000000; font-weight: normal; background-color: #F3F6FA }
+.nav			{ font: 12px Verdana,Tahoma; color: #000000; font-weight: bold }
+.nav a			{ color: #000000 }
+.header			{ font: 11px Verdana,Tahoma; color: #000000; font-weight: bold; background-image: url("images/green/bg01.gif") }
+.header a		{ color: #FFFFFF }
+.category		{ font: 11px Verdana,Tahoma; color: #000000; background-color: #EFEFEF }
+.tableborder		{ background: #4D76B3; border: 0px solid #4D76B3 } 
+.singleborder		{ font-size: 0px; line-height: 0px; padding: 0px; background-color: #F3F6FA }
+.smalltxt		{ font: 11px Verdana,Tahoma }
+.outertxt		{ font: 12px Verdana,Tahoma; color: #000000 }
+.outertxt a		{ color: #000000 }
+.bold			{ font-weight: bold }
+.altbg1			{ background: #F3F6FA }
+.altbg2			{ background: #FFFFFF }

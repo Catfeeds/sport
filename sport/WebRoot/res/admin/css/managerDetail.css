@@ -1,0 +1,11 @@
+.headImgWrap{
+	width:100%;
+}
+.imgPreview{
+	width:50%;
+	text-align:center;
+}
+.imgPreview img{
+	height:80px;
+	width:80px;
+}

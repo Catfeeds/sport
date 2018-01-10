@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+#header, #content , #footer {
+	width: 100%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+/******************************  top banner  ********************************/
+
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+
+/******************************  discount list  ********************************/
+
+.discountListBox {
+	width:95%;
+	margin:0px auto;
+}
+
+.discountList li {
+	font-size:16px;
+	line-height:1.5em;
+	vertical-align:middle;
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+.discountList li .InfoPicture img {
+	width:100%;
+	max-height:160px;
+}
+
+.discountList li {
+	overflow:hidden;
+	border-radius: 5px 5px 10px 10px;
+	-moz-border-radius: 5px 5px 10px 10px;
+	-webkit-border-radius: 5px 5px 10px 10px;
+	-o-border-radius:5px 5px 10px 10px;
+	border:1px solid #d0d1d4;
+	margin: 10px auto;
+	padding: 8px 8px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+	background: url(../image/bottom.png) repeat-x scroll left bottom #FFFFFF;
+	background-size:2px auto;
+}
+
+.InfoTime {
+	color:#999;
+	text-align:left;
+	font-size:12px;
+	padding:2px 0px;
+	height:25px
+}
+
+.InfoContent {
+	font-size: 13px;
+	line-height: 18px;
+
+}
+
+.InfoContent img {
+	width: 100%; 
+	max-height: 170px;
+	margin-top: 6px;
+}
+
+.discountList h1{
+	font-size: 18px;
+}
+
+/******************************  comment list  ********************************/
+
+
+.CommentList h1 {
+	border-bottom:1px #999999 dotted;
+	padding:5px 0px;
+}
+
+.LeaveComment h1 {
+	border-bottom:1px #999999 dotted;
+	padding:5px 0px;
+}
+
+.CommentContent {
+	color:#999999
+}
+
+table.commenttable {
+	width:95%;
+	margin: 0px auto;
+}
+table.commenttable.t1 {
+	width:28%;
+	text-align:left
+}
+table.commenttable.t2 {
+	height:72%;
+	text-align:left
+}
+
+
+/******************************  product list  ********************************/
+
+.personalImge {
+	float: left;
+}
+
+.personalImg img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 5px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.personalName {
+	height: 20px;
+	font-size: 14px;
+	color: #252525;
+	line-height: 16px;
+}
+
+.replyTime {
+	color:#999;
+	text-align:left;
+	font-size:10px;
+	height:20px;
+}
+
+.replyContent {
+	height: 100%;
+	font-size: 14px;
+	color: #252525;
+	line-height: 18px;
+	margin-left: 75px;
+}
+
+
+/* clear ************************/
+
+.clear {
+	clear:both;
+}

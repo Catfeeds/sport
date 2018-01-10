@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#header, #content , #footer {
+	width: 99%;
+	margin: 0px auto;
+	border:0px solid green;
+}
+
+.clearfix {
+	clear:both;
+}
+
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.firstaddress li {
+	height:100%;
+	line-height:40px;
+	text-align:center;
+	background:#fff;
+	border-bottom:1px solid #69c;
+	margin-bottom:5px;
+}
+
+.secondaddress {
+	width:90%;
+	margin:5px auto;
+	display:none;
+	border:1px solid #ddd;
+}
+
+.secondaddress li {
+	background:#eee;
+	border:0px solid #ddd;
+	margin-bottom:1px;
+}

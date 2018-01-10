@@ -1,0 +1,88 @@
+
+.contentWrap{
+	width:100%;
+}
+
+.pageItemWrap{
+	width:80%;
+	margin:0 auto;
+	min-height:500px;
+	margin-left:30px;
+}
+.pageItem{
+	width:100%;
+}
+/*********用户基本信息布局*********/
+/*****静态展示总体布局*****/
+.uploadSigleFile{
+	margin-left:30px;
+}
+.imgTitle{
+	width:300px;
+	text-align:left;
+	margin:0 auto;
+	margin-top:20px;
+	padding-left:30px;
+}
+.headImgWrap{
+	width:100%;
+	text-align:center;
+}
+.imgPreview{
+	width:80px;
+	margin:0 auto;
+	margin-top:5px;
+}
+.imgPreview img{
+	width:80px;
+	height:80px;
+}
+
+.basicInfoWrap{
+	width:100%;
+}
+.basicInfoWrap .item{
+	width:100%;
+	height:50px;
+	clear:right;
+}
+.basicInfoWrap .item .title{
+	width:100px;
+	height:100%;
+	line-height:100%;
+	text-align:left;
+	float:left;
+}
+.basicInfoWrap .item .content{
+	width:200px;
+	height:100%;
+	line-height:100%;
+	text-align:left;
+	float:left;
+}
+.basicInfoWrap .item .operate{
+	width:100px;
+	height:100%;
+	line-height:100%;
+	text-align:left;
+	float:right;
+}
+.personalIntro{
+	width:100%;
+	min-height:200px;
+}
+.operateIntro{
+	width:100%;
+	text-align:right;
+	padding-right:400px;
+	margin-top:30px;
+}
+/****动态修改特别支持*****/
+
+/*********留言排版引用留言板布局********/
+
+/*************购买记录排版*************/
+.productPreview a img{
+	height:30px;
+	width:30px;
+}

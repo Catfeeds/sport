@@ -1,0 +1,81 @@
+
+.levelSearchWrap{
+	width:100%;
+	margin:10px;
+	text-align:center;
+}
+.searchFormWrap{
+	text-align:center;
+}
+.addLevelTitleText{
+	text-align:center;
+	font-size:24px;
+	font-weight:bolder;
+	margin-top:0;
+	padding-top:0;
+	margin-bottom:10px;
+}
+.addLevelWrap{
+	margin-bottom:20px;
+	border-bottom:2px solid rgb(222,222,222);
+}
+.addLevelWrap,.leveBaseInfo{
+	width:100%;
+}
+.floatLeft,.item{
+	float:left;
+	margin-left:15px;
+}
+.chooseTypeWrap{
+	width:60%;
+	float:left;
+}
+.levelIntroWrap{
+	width:100%;
+	margin-top:5px;
+	margin-left:5px;
+
+}
+.chooseTypeWrap .title{
+	float:left;
+	
+}
+.title{
+	height:30px;
+	line-height:30px;
+}
+.levelIntroWrap .title{
+	width:400px;
+	text-align:left-side;
+}
+.addLevelBtnWrap{
+	width:400px;
+	text-align:right;
+	margin-top:5px;
+}
+/*********编辑框美化***********/
+input[type=text]{
+	width:160px;
+	height:24px;
+}
+textarea{
+	width:400px;
+	height:60px;
+}
+textarea,input[type=text]{
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;	
+	font-size:16px;
+	line-height:26px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #9A9A9A #CCC #CCC #9A9A9A;
+    border-top-color: #9A9A9A;
+    border-right-color: #CCC;
+    border-bottom-color: #CCC;
+    border-left-color: #9A9A9A;
+	word-wrap: break-word;
+}
+textarea:hover,textarea:active,textarea:focus,input[type=text]:hover,input[type=text]:active,input[type=text]:focus{
+	word-wrap: break-word;
+	border-color:#2D6493;
+}

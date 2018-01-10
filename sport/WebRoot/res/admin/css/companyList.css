@@ -1,0 +1,131 @@
+/*************搜索部分布局**************/
+.companySearchWrap{
+	width:100%;
+	margin-top:30px;
+	margin-bottom:10px;
+	text-align:center;
+}
+.searchFormWrap{
+	text-align:center;
+}
+/********产品列表布局********/
+.companyListWrap{
+	width:1024px;
+	height:auto;
+	margin:0 auto;
+	border:2px solid rgb(222,222,222);
+}
+
+.companyList{	
+	FONT-FAMILY: Verdana, Arial, sans-serief;
+	FONT-SIZE: 12px;
+	color: #666666;
+}
+
+.companyList .item{
+	width:100%;
+	height:200px;
+	padding:10px;
+	padding-bottom:2px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-bottom:1px solid rgb(222,222,222);
+}
+.companyInfoWrap{
+	width:100%;
+	height:110px;
+	overflow:hidden;
+	position:relative;
+}
+.companyOperate{
+	width:100%;
+	height:30px;
+	text-align:center;
+	overflow:hidden;
+}
+
+.companyList .item .companyImg a img{
+	width:100px;
+	height:100px;
+	border:0px;
+}
+.companyImg,.companyInfo{
+	float:left;
+	
+}
+.companyInfo{
+	width:860px;
+	margin-left:5px;
+	margin-top:0px;
+}
+.infoLeft{
+	width:300px;
+	float:left;
+}
+.companyInfoWrap .intro{
+	max-width:560px;
+	float:left;
+}
+.companyInfoWrap .intro p{
+	max-width:600px;
+	max-height:80px;
+	text-overflow :ellipsis;
+	word-wrap:break-word;
+}
+.companyName{
+	width:100%;
+	margin:10px auto;
+	text-align:center;
+}
+.companyName .content{
+	witdh:400px;
+	text-align:center;
+	margin:0 auto;
+}
+.companyOperate .detailInfo{
+	float:right;
+	margin-right:30px;
+}
+.companyOperate .chooseBox{
+	float:left;
+	text-align:left;
+}
+/********美化********/
+a{
+	text-decoration:none;
+	color:rgb(34,34,46);
+}
+a:hover{
+	color:rgb(222,111,111);
+}
+.companyName a div{
+	margin:0 auto;
+	width:300px;
+	height:40px;
+	font-family:华文行楷;
+	font-size:22px;
+	line-height:40px;
+	font-weight:bolder;
+	text-align:center;
+	background:url(../images/companybg.png) no-repeat;
+}
+.companyName a:hover div{
+	background:url(../images/companyHoverbg.png) no-repeat;
+}
+.moneyStyle{
+	color:red;
+	font-weight:bold;
+}
+.contentStyle{
+	color:black;
+	font-weight:bold;
+}
+.companyTypePath{
+	font-size:14px;
+	font-weight:bold;
+	color:black;
+	background-color:#E6E6E6;
+	width:100%;
+	border-bottom:1px solid rgb(222,222,222);
+	margin-bottom:5px;
+}

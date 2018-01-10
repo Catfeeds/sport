@@ -1,0 +1,282 @@
+﻿@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, "微软雅黑"; 
+    font-size: 12px;
+}
+
+/********************* order detail **********************/
+
+.orderdetail { 
+    width: 1000px;
+    margin:0px auto;
+    margin-top: 5px;
+
+}
+
+.orderdetailBox {
+    width: 1000px;
+    margin: 0px auto;
+    margin-top: 10px;
+    
+}
+
+.orderdetailTitle {
+    color: #39c;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    width: 130px;
+    height: 40px;
+    background-color: #f6f6f6;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.orderdetailContentBox {
+    border: 1px solid #ddd;
+    color: #666;
+    padding-bottom: 20px;
+
+}
+
+.orderdetailContentBoxBody {
+    width: 550px;
+    margin: 0px auto;
+}
+
+.orderdetailName {
+    margin-top: 20px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 40px;
+    line-height: 40px;
+}
+
+.orderdetailContentTable {
+    margin-left: 40px;
+
+}
+
+.orderdetailContentTable tr {
+    line-height: 30px;
+}
+
+.orderdetailContentTable tr, .orderdetailContentTable td,.orderdetailContentTable th {
+    font-size: 14px;
+}
+
+.orderdetailDate {
+    color: rgb(250,78,0);
+}
+
+.orderdetailPlace li {
+    min-width: 200px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #39c;
+    height: 25px;
+    text-align: center;
+    color: #39c;
+    font-size: 14px;
+}
+
+.orderdetailPrice {
+    height: 40px;
+    font-size: 18px;
+    margin-left: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.orderdetailPrice span {
+    color: rgb(250,78,0);
+    font-size: 22px;
+    font-weight: bold;
+    padding:0px 5px;
+}
+
+.orderdetailPay {
+    width: 998px;
+    height: 60px;
+    float: right;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+}
+
+
+/********************        进度条       ******************/
+
+.orderdetailState {
+    width: 1000px;
+    height: 30px;
+    margin:0px auto;
+    padding-bottom: 5px;
+}
+
+.orderdetailState ul li {
+    float: left;
+    width: 150px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.orderdetailStateOne {
+    margin-left: 15px;
+}
+
+.orderdetailStateTwo {
+    margin-left: 145px;
+}
+
+.orderdetailStateThree {
+    margin-left: 145px;
+}
+
+.orderdetailState .orderdetailStateFour {
+    width: 60px;
+    text-align: right;
+    margin-left: 153px;
+}
+
+#progressBar{
+    width: 900px;
+    height: 20px;
+    position: relative;
+    margin:0px auto;
+}
+#progressBar div{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top:50%;
+    left: 0;
+    margin-top:-11px;
+    border:1px solid #ddd;
+    background: #ccc;
+}
+#progressBar div span{
+    position: absolute;
+    display: inline-block;
+    background: #39c;
+    height: 4px;
+    width: 100%;
+}
+#progressBar>span{
+    position: absolute;
+    top:0;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    border:2px solid #ddd;
+    border-radius: 50%;
+    background: #39c;
+    margin-left: -20px;
+    color:#fff;
+}
+#progressBar .spanOne{
+    left: 0%;
+
+}
+
+#progressBar .spanTwo{
+    left: 33%;
+}
+
+#progressBar .spanThree{
+    left: 67%;
+}
+
+#progressBar .spanFour{
+    left: 100%;
+}
+
+
+/***************************************/
+
+.orderdetailSuccessBox {
+    width: 1000px;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.orderdetailFailPic {
+    width: 400px;
+    height: 150px;
+    margin: 0px auto;
+}
+
+.orderdetailFailPic img {
+    margin-top: 10px;
+    width: 390px;
+    height: 140px;
+}
+
+.orderdetailFailWord {
+    width: 200px;
+    height: 30px;
+    margin: 0px auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.orderdetailFailWord span {
+    color: rgb(250,78,0);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+.orderdetailSuccessBtn {
+    width: 266px;
+    height: 50px;
+    margin: 0px auto;
+}
+.orderdetailSuccessBtn ul li {
+    margin-top: 5px;
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+}
+
+.orderdetailSuccessBtn ul li a{
+    color: #39c;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.orderdetailSuccessBtn ul li a:hover{
+    color: rgb(209, 0, 0);
+    text-decoration: none;
+}
+
+.orderdetailSuccessBtn .moveNow {
+    background: #39c;
+    margin-left: 20px;
+}
+
+.orderdetailSuccessBtn .moveNow a{
+    color: #fff;
+}
+
+h6 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.orderdetailSuccessTitle {
+    width: 190px;
+    height: 60px;
+    margin: 0px auto;
+}

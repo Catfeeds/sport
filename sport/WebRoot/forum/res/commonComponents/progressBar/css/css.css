@@ -1,0 +1,40 @@
+/* votebox */
+.votebox {
+	width: 100%;
+	margin-left: 10px;
+	text-align: left;
+	position: relative;	
+}
+/* barbox */
+.barbox {
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.barbox dt a {
+	color: #0048CC;
+}
+
+.barbox dd {
+	float: left;
+}
+
+.barbox dd.last {
+	color: #999;
+}
+
+.barbox dd.barline {
+	width: 100%;
+	background: url(../images/jdtbg.png) left center no-repeat;
+	height: 16px;
+	overflow: hidden;
+	display: inline;
+}
+
+.barbox dd.barline div.experience {
+	height: 16px;
+	overflow: hidden;
+	background: url(../images/barbg.gif) right center repeat-x;
+	border-radius: 8px;
+}

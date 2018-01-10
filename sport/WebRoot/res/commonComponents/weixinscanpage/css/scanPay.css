@@ -1,0 +1,49 @@
+.mainContent{
+	margin:0 auto;
+	width:800px;
+}
+.wechat-pay{
+			margin-left: 20px;
+			width: 800px;
+		}
+		.wechat-pay h4{
+			line-height: 20px;
+			margin: 5px 0px;
+			padding: 0;
+		}
+		.wechat-pay p{
+			background-color:rgb(170,203,246);
+			margin: 0;
+			font-size: 14px;
+			border:1px solid #333 ;
+			padding: 2px 20px;
+		}
+		.wechat-pay-value{
+			border: 1px solid #333;
+			border-top: none;
+			padding:5px 20px;
+		}
+		.wechat-pay-value b{
+			color: #FF7800;		
+		}
+		#qrcodeImgWrap{
+			width: 800px;
+			height: 500px;
+			background: url(../images/wechatpayback.fw.png) repeat-x;
+			
+		}
+		#qrcodeImgWrap img{
+			margin-top: 80px;
+			margin-left: 100px;
+		}
+		.wechat-pay-button{
+			margin-left: 100px;
+			margin-top: 20px;
+			width: 250px;
+			padding: 5px 0;
+			text-align: center;
+			font-size: 14px;
+			color: #FFF;
+			border:1px solid #333;
+			background: rgb(90,139,217) url(../images/scanfico.fw.png) no-repeat;
+		}

@@ -1,0 +1,99 @@
+/* css 重置 */* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background: #fff;
+	font: normal 12px/22px 宋体;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #1974A1;
+}
+/* 本例子css */.tabBar {
+	width: 600px;
+	min-height:400px;
+	font-family: "Microsoft YaHei";
+	margin: 30px auto;
+}
+
+.tabBar .hd ul {
+	z-index: 5;
+	position: relative;
+	zoom: 1;
+}
+
+.tabBar .hd li {
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 4px;
+	padding: 0px 16px 0px 16px;
+	margin-right: 5px;
+	color: #333333;
+	background: url(images/btn_bg.gif) repeat-x;
+	border: 1px solid #c8d1d5;
+	border-bottom: 0px;
+	cursor: pointer;
+}
+
+.tabBar .hd li.on {
+	height: 27px;
+	line-height: 32px;
+	font-weight: bold;
+	overflow: hidden;
+	margin-top: 0px;
+	position: relative;
+	top: 1px;
+	border-top: 2px solid #004ea2;
+	background: #fff;
+}
+
+.tabBar .hd li.on span {
+	font-weight: bold;
+	color: #c00;
+}
+
+.tabBar .bd {
+	border: 1px solid #C8D1D5;
+	padding: 10px 40px 0 40px;
+	clear: both;
+	position: relative;
+	height: 400px;
+	overflow-x: hidden;
+	overflow-y:auto;
+}
+
+.tabBar .bd .conWrap {
+	width: 600px;
+}
+
+.tabBar .prev,.tabBar .next {
+	position: absolute;
+	left: 10px;
+	top: 200px;
+}
+
+.tabBar .next {
+	left: auto;
+	right: 10px;
+}
+
+.tabBar .prevStop,.tabBar .nextStop {
+	display: none;
+}
+
+.tabBar .bd p {
+	padding-bottom: 10px
+}

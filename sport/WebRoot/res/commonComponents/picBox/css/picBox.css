@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #e6e6e6;
+	font-size: 12px;
+	font-family: "arial, helvetica, sans-serif, 微软雅黑";
+}
+
+.picOp {
+	height: 30px;
+	margin-left:40px;
+	margin-top:10px;
+}
+
+.picOp ul li{
+	width: 90px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 25px;
+	border: 1px solid #999;
+	margin-right: 10px;
+}
+
+.picOp ul li:hover {
+	background: #69f;
+	color: #FAFAFA;
+}
+
+.picBox {
+	margin: 0px 30px;
+}
+
+ul, li {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	list-style: none;
+}
+
+.picBox ul li {
+	width: 270px;
+	height: 170px;
+	margin: 10px 5px;
+	position: relative;
+	z-index: 1;
+	padding: 10px 10px;
+	background: white;
+}
+
+.picBox ul li img {
+	width: 270px;
+	height: 170px;
+}
+
+.picBox ul li .selectBox {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 2;
+	background: #f9f9f9;
+	display: none;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+}
+
+.deleteIcon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 2;
+	background: #FAFAFA;
+	border: 1px solid #999;
+	display: none;
+}
+
+.picBox ul li .deleteIcon img {
+	width: 20px;
+	height: 20px;
+}
+
+
+/************  checkbox ***************/
+
+.regular-checkbox {
+	display:none;
+}
+.regular-checkbox+label {
+	background-color:#fafafa;
+	border:1px solid #cacece;
+	box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding:9px;
+	border-radius:3px;
+	display:inline-block;
+	position:relative;
+}
+.regular-checkbox+label:active,.regular-checkbox:checked+label:active {
+	box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.regular-checkbox:checked+label {
+	background-color:#e9ecee;
+	border:1px solid #adb8c0;
+	box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0px -15px 10px -12px rgba(0,0,0,0.05),inset 15px 10px -12px rgba(255,255,255,0.1);
+	color:#99a1a7;
+}
+.regular-checkbox:checked+label:after {
+	content:'\2714';
+	font-size:14px;
+	position:absolute;
+	top:0px;
+	left:3px;
+	color:#99a1a7;
+}
+
+
+
+
+
+

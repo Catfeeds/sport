@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+span {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+/******************************  top banner  ********************************/
+.topbannerWord {
+	text-align: center;
+	width: 100%;
+	background: #3cf;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+/******************************  主要四类菜单  ********************************/
+
+.channellist {
+	width:99%;
+	border:0px solid red;
+	margin:0px auto;
+}
+.channellist li {
+	float:left;
+	text-align: center;
+	border:0px dashed blue;
+	width:33%;
+}
+.channellist li a {
+	display:block;
+	margin:5px;
+	padding-top:0px;
+	padding:5px;
+	background-color:#FFFFFF;
+	border:0px solid #ddd ;
+
+
+}
+.channellist li .ChannelName {
+	text-align:center;
+	height:10px;
+	line-height:10px;
+	border:0px dashed red;
+	padding:5px;
+	font-size:14px;
+
+}
+.channellist li .ChannelIcon {
+	text-align: center;
+	font-weight: bold;
+	overflow:hidden;
+	background: white center center no-repeat;
+	padding: 0px;
+	color:#FFFFFF;
+	margin:auto;
+	border:0px solid red;
+
+}
+.channellist li .ChannelIcon img {
+	vertical-align:middle;
+	width:50%;
+}
+
+
+/******************************  隐藏菜单  ********************************/
+
+.hide{
+	width:99%;
+	border:0px solid red;
+	margin:0px auto;
+}
+
+.hide li {
+	float:left;
+	text-align: center;
+	border:0px dashed blue;
+	width:25%;
+}
+
+.hide li a{
+	display:block;
+	margin:5px;
+	padding-top:0px;
+	padding:5px;
+	background-color:#FFFFFF;
+	border:1px solid #39c ;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-o-border-radius:8px;
+	-webkit-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+	-moz-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+	-o-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+	box-shadow: 0px 1px 3px rgb(190, 190, 190);
+}
+
+
+/******************************  热门场馆  ********************************/
+
+.hotSportHall {
+	border-bottom: 2px solid #3cf;
+	text-align: center;
+	color: #3cf;
+	height: 30px;
+	line-height: 30px;
+}
+
+.productList {
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 0px 20px;
+
+}
+
+.productList li {	
+	height: 80px;
+	padding: 15px 0px;
+	position: relative;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.productList a {
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+	color: #252525;
+	font-size: 14px;
+}
+
+.productList img {
+  width: 120px;
+  height: 76px;
+  float: left;
+  margin-right: 13px;
+  border: 1px solid #e1e1e1;
+  vertical-align: middle;
+}
+
+.productTitle {
+  height: 32px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #252525;
+  line-height: 16px;
+  margin-bottom: 13px;
+}
+
+.productPrice {
+	color: #e4393c;
+	font-size: 14px;
+}
+
+.productList li .book {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  background-color: #ff7878;
+  color: #FFF;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  font-size: 12px;
+}
+

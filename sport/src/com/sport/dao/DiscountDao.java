@@ -41,7 +41,7 @@ public class DiscountDao extends RootDao {
     //分页查询
     public int findAll(List<Discount> discounts, Discount discount, int pageNumber, int pageSize, String groupByColumn,
             String orderByColumn, boolean isAsc) {
-        StringBuffer queryString = new StringBuffer("from Discount e where 1=1 and e.discountStatus=" + discount.getDiscountStatus());
+        StringBuffer queryString = new StringBuffer("from Discount e where e.discountStatus=" + discount.getDiscountStatus());
         if (discount.getCoach() != null) {
             queryString.append(" and e.coach.id=" + discount.getCoach().getId() + "  ");
         }

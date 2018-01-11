@@ -87,7 +87,7 @@
 						<img  src="res/images/telphone.png" />
 					</div>	
 					<div class="footerbannerInfoPhoneNumber">
-						<span>0730-1234567</span>
+						<span>1111-1111111</span>
 					</div>
 				</div>
 				<div class="footerbannerInfoTime">

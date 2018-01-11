@@ -130,7 +130,7 @@ public class OrderDao extends RootDao{
 		//生成账单明细
 		public int findAll(List<Order> orders, Acount acount, int pageNumber,
 				int pageSize) {
-			StringBuffer queryString=new StringBuffer("from Order e where 1=1 and e.orderStatus= "+Order.USEED_ORDER+" ");
+			StringBuffer queryString=new StringBuffer("from Order e where and e.orderStatus= "+Order.USEED_ORDER+" ");
 			if(acount.getCoach()!=null&&(acount.getCoach().getId()>0)){
 				queryString.append(" and e.coach.id="+acount.getCoach().getId()+"  ");
 			}

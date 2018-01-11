@@ -46,8 +46,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="slider-container">
 			<div class="slider-wrapper">
 				<div class="slide"> <a href="javascript:void(0)"><img src="res/images/banner1.png" alt=""></a> </div>
-				<div class="slide"> <a href="choosePlace.jsp"><img src="res/images/banner2.png" alt=""></a> </div>
-				<div class="slide"> <a href="chooseCoach.jsp"><img src="res/images/banner3.png" alt=""></a> </div>
+				<div class="slide"> <a href="simpleSearch?condition.searchType=place&condition.searchFlag=complex&condition.address.id=0"><img src="res/images/banner2.png" alt=""></a> </div>
+				<div class="slide"> <a href="simpleSearch?condition.searchType=coach&condition.searchFlag=complex&condition.address.id=0"><img src="res/images/banner3.png" alt=""></a> </div>
 				<div class="slide"> <a href="forum/forumIndex.jsp"><img src="res/images/banner4.png" alt=""></a> </div>
 			</div>
 		</div>

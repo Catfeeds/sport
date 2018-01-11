@@ -14,16 +14,14 @@ import com.sport.entity.Acount;
 import com.sport.entity.CoachPreOrder;
 import com.sport.entity.Order;
 import com.sport.entity.OrderItem;
-import com.sport.entity.Place;
 import com.sport.entity.PlacePreOrder;
-import com.sport.entity.PlaceProduct;
 import com.sport.entity.User;
 import com.sport.exception.PromptException;
 import com.sport.exception.RootException;
 
 @Component
 public class OrderService extends RootService {
-	private static final String ENTITY_NAME = "Order";
+	//private static final String ENTITY_NAME = "Order";
 	private OrderDao orderDao;
 	private PlacePreOrderService placePreOrderService;
 	private CoachPreOrderService coachPreOrderService;
@@ -72,11 +70,12 @@ public class OrderService extends RootService {
 		if (order == null || (order.getId() <= 0))
 			throw new RootException(RootException.NEED_MORE_DELETE_INFO);
 		order = load(order);
-		if(order.getOrderStatus()==Order.USELESS_ORDER||
-				(order.getOrderStatus()==Order.PAY_FAILED)
-				||(order.getOrderStatus()==Order.REFOUNDED_ORDER)||(order.getOrderStatus()<=Order.SUBMIT_NOT_PAY_ORDER)){
-			
-		}else{
+		if (order.getOrderStatus() == Order.USELESS_ORDER
+				|| (order.getOrderStatus() == Order.PAY_FAILED)
+				|| (order.getOrderStatus() == Order.REFOUNDED_ORDER)
+				|| (order.getOrderStatus() <= Order.SUBMIT_NOT_PAY_ORDER)) {
+
+		} else {
 			throw new PromptException("您只能删除未付款、废单、支付失败、已退款的订单！");
 		}
 		// 删除订单时需要更新预定信息
@@ -90,11 +89,11 @@ public class OrderService extends RootService {
 			} else {
 				CoachPreOrder preOrder = item.getCoachPreOrder();
 				int[] orderInfos = preOrder.getOrderInfos();
-				if(item.getTime()==3){
+				if (item.getTime() == 3) {
 					orderInfos[0]++;
 					orderInfos[1]++;
 					orderInfos[2]++;
-				}else
+				} else
 					orderInfos[item.getTime()]++;
 				preOrder.setOrderInfos(orderInfos);
 				coachPreOrderService.update(preOrder);
@@ -102,9 +101,12 @@ public class OrderService extends RootService {
 		}
 		orderDao.delete(order);
 	}
-	
-	/**释放订单的资源
-	 * @throws RootException */
+
+	/**
+	 * 释放订单的资源
+	 * 
+	 * @throws RootException
+	 */
 	public void releaseOrder(Order order) throws RootException {
 		if (order == null || (order.getId() <= 0))
 			throw new RootException(RootException.NEED_MORE_DELETE_INFO);
@@ -120,36 +122,40 @@ public class OrderService extends RootService {
 			} else {
 				CoachPreOrder preOrder = item.getCoachPreOrder();
 				int[] orderInfos = preOrder.getOrderInfos();
-				if(item.getTime()==3){
+				if (item.getTime() == 3) {
 					orderInfos[0]++;
 					orderInfos[1]++;
 					orderInfos[2]++;
-				}else
+				} else
 					orderInfos[item.getTime()]++;
 				preOrder.setOrderInfos(orderInfos);
 				coachPreOrderService.update(preOrder);
 			}
 		}
 	}
-	//判断是否有用户新生成的订单超过30分钟还未支付的,状态置为废单，并释放资源
-	public void checkTimeOutNewOrders() throws RootException{
-		List<Order> orders=new ArrayList<Order>();
-		Page page=new Page().setPageSize(50);
-		page.setTotalItemNumber(orderDao.findAllTimeOutOrders(orders, 1, page.getPageSize(),null,null,true));
-		for(int i=1;i<=page.getTotalPageNumber();i++){
-			List<Order> os=new ArrayList<Order>();
-			orderDao.findAllTimeOutOrders(os, i, page.getPageSize(),null,null,true);
-			for(Order order:os){
-				long oldTime=order.getCreateTime().getTime();
-				long newTime=new Date().getTime();
-				if((newTime-oldTime)>Order.ORDER_TIMEOUT_LIMIT){//如果已经超时了，就释放资源
+
+	// 判断是否有用户新生成的订单超过30分钟还未支付的,状态置为废单，并释放资源
+	public void checkTimeOutNewOrders() throws RootException {
+		List<Order> orders = new ArrayList<Order>();
+		Page page = new Page().setPageSize(50);
+		page.setTotalItemNumber(orderDao.findAllTimeOutOrders(orders, 1,
+				page.getPageSize(), null, null, true));
+		for (int i = 1; i <= page.getTotalPageNumber(); i++) {
+			List<Order> os = new ArrayList<Order>();
+			orderDao.findAllTimeOutOrders(os, i, page.getPageSize(), null,
+					null, true);
+			for (Order order : os) {
+				long oldTime = order.getCreateTime().getTime();
+				long newTime = new Date().getTime();
+				if ((newTime - oldTime) > Order.ORDER_TIMEOUT_LIMIT) {// 如果已经超时了，就释放资源
 					releaseOrder(order);
-					order.setOrderStatus(Order.USELESS_ORDER);//置为废单
+					order.setOrderStatus(Order.USELESS_ORDER);// 置为废单
 					orderDao.update(order);
 				}
 			}
 		}
 	}
+
 	public void delete(int id) throws RootException {
 		if (id <= 0)
 			throw new RootException(RootException.NEED_MORE_DELETE_INFO);
@@ -175,29 +181,34 @@ public class OrderService extends RootService {
 			throw new RootException(RootException.NEED_MORE_FIND_INFO);
 		return orderDao.load(id);
 	}
+
 	// 按某列排序查看会员信息
-	public int findAll(List<Order> orders,Order order, int pageNumber, int pageSize) {
-		return findAll(orders,order, pageNumber, pageSize,"createTime", false);
+	public int findAll(List<Order> orders, Order order, int pageNumber,
+			int pageSize) {
+		return findAll(orders, order, pageNumber, pageSize, "createTime", false);
 	}
 
+	public int findAll(List<Order> orders, Order order, int pageNumber,
+			int pageSize, String orderByColumn, boolean isAsc) {
+		return orderDao.findAll(orders, order, pageNumber, pageSize, null,
+				"createTime", false);
+	}
 
-	public int findAll(List<Order> orders,Order order, int pageNumber, int pageSize,
-			String orderByColumn, boolean isAsc) {
-		return orderDao.findAll(orders,order, pageNumber, pageSize, null,
+	// /////////////
+	// 用户查看自己的所有订单
+	public int findAllUserOrders(List<Order> orders, User user, int pageNumber,
+			int pageSize) {
+		return findAllUserOrders(orders, user, pageNumber, pageSize,
 				"createTime", false);
 	}
-	///////////////
-	//用户查看自己的所有订单
-	public int findAllUserOrders(List<Order> orders,User user, int pageNumber, int pageSize) {
-		return findAllUserOrders(orders,user, pageNumber, pageSize,"createTime", false);
-	}
-	
-	public int findAllUserOrders(List<Order> orders,User user, int pageNumber, int pageSize,
-			String orderByColumn, boolean isAsc) {
-		return orderDao.findAllByUser(orders,user, pageNumber, pageSize, null,
+
+	public int findAllUserOrders(List<Order> orders, User user, int pageNumber,
+			int pageSize, String orderByColumn, boolean isAsc) {
+		return orderDao.findAllByUser(orders, user, pageNumber, pageSize, null,
 				"createTime", false);
 	}
-	//////////////
+
+	// ////////////
 	public boolean deleteSelectedOrders(String ids) throws PromptException {
 		int id = 0;
 		for (String idStr : ids.split(",")) {
@@ -217,8 +228,7 @@ public class OrderService extends RootService {
 
 	public int findAll(List<Order> orders, Acount acount, int pageNumber,
 			int pageSize) {
-		return orderDao.findAll(orders,acount, pageNumber, pageSize);
+		return orderDao.findAll(orders, acount, pageNumber, pageSize);
 	}
 
-	
 }

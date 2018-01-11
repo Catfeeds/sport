@@ -1,14 +1,10 @@
 package com.sport.service;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
-import com.sport.dto.Page;
 import com.sport.entity.Order;
 import com.sport.exception.RootException;
 /*import danyuan.weixin.dto.order.OrderInfo;
@@ -23,6 +19,9 @@ public class QueryOrderService {
 		boolean re=false;
 		try {
 			order=orderService.load(order);
+			//在此默认支付成功~
+			order.setOrderStatus(Order.PAYED_NOT_USE_ORDER);
+			orderService.update(order);
 			if(order.getOrderStatus()==Order.PAYED_NOT_USE_ORDER)
 				re=true;
 		} catch (RootException e) {			

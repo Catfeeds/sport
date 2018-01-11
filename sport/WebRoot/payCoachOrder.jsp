@@ -220,7 +220,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 			else 
 			{
-				window.location.href="index.html";
+				window.location.href="index.jsp";
 			}
 			t=setTimeout("timedCount()",1000)
 		}

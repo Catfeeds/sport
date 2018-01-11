@@ -1,6 +1,5 @@
 package com.sport.action;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -22,7 +21,6 @@ import com.sport.entity.Order;
 import com.sport.entity.OrderItem;
 import com.sport.entity.User;
 import com.sport.exception.PromptException;
-import com.sport.exception.PromptException;
 import com.sport.exception.RootException;
 import com.sport.exception.ServerErrorException;
 import com.sport.service.OrderItemService;
@@ -34,6 +32,7 @@ import com.sport.timer.TimerTaskQueue;
 @Component
 @Scope("prototype")
 public class OrderAction extends RootAction {
+	private static final long serialVersionUID = 1L;
 	// 定义订单的支付方式
 	public static final String PAY_BY_WEIXIN_JSAPI = "weixinJs";// 微信页面jsAPI进行支付
 	public static final String PAY_BY_WEIXIN_NATIVE = "weixinNative";// pc页面微信扫码支付
@@ -128,10 +127,6 @@ public class OrderAction extends RootAction {
 				orderNumber = "" + new Date().getTime();
 				session.put("orderNumber", orderNumber);
 				order = new Order();
-				
-//				SimpleDateFormat sbr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-				//sbr.parse(sbr.format(new Date()))	
-				
 				order.setOrderNumber(orderNumber).setBuyer(user)
 						.setCreateTime(new Date());
 				System.out.println("createtime is " + order.getCreateTime() + "______________________");
@@ -322,7 +317,6 @@ public class OrderAction extends RootAction {
 		}
 		if (order.getCoach() != null)
 			return "payCoachOrder";
-		// Demo.getCodeurl(new WxPayDto());
 		return "payOrder";
 	}
 
@@ -369,37 +363,21 @@ public class OrderAction extends RootAction {
 	*/}
 
 	// 微信原生态扫描二维码进行支付，code_url有效期为2小时，过期后扫码不能再发起支付。
-	/*public String weixinScanPay() throws ServerErrorException, PromptException {
+	public String weixinScanPay() throws ServerErrorException, PromptException {
 		try {
 			order = orderService.load(this.order);
-			StringBuffer productContent = new StringBuffer();
-			productContent
-					.append("您正在通过" + WeixinServerConfig.APPLICATION_NAME);
-			if (order.getCoach() == null) {
-				productContent.append("预定运动场地");
-			} else {
-				productContent.append("预约教练");
-			}
-			productContent.append("!");
+			System.out.println(order.getId());
 			// 微信支付jsApi
-			WxPayDto tpWxPay = new WxPayDto();
-			tpWxPay.setBody(productContent.toString());
-			tpWxPay.setOrderId(order.getOrderNumber());
-			tpWxPay.setSpbillCreateIp(ServletActionContext.getRequest()
-					.getRemoteHost());
-			// tpWxPay.setTotalFee(""+0.01);
-			tpWxPay.setTotalFee(String.valueOf(order.getTotalAcount()));
 			if (order.getNativePayUrl() != null) {
 				long usedTime = new Date().getTime()
 						- order.getPayingBeginTime().getTime();
 				long outTime = 2 * TimerTaskQueue.UPDATE_PREORDER_SCHEDULE;// 2个小时
 				if (usedTime >= outTime) {
-					nativePayUrl = PayOrderManager.getCodeurl(tpWxPay);
 				} else {
 					nativePayUrl = order.getNativePayUrl();
 				}
 			} else {
-				nativePayUrl = PayOrderManager.getCodeurl(tpWxPay);
+				nativePayUrl = "erweimachaolianjie";
 			}
 			order.setOrderStatus(Order.PAYING_ORDER);// 设置订单正在支付中
 			order.setPayingBeginTime(new Date());// 设置开始支付的时间，进行一个计时
@@ -414,7 +392,6 @@ public class OrderAction extends RootAction {
 		}
 		return "weixinScanPay";
 	}
-*/
 	// 订单支付成功后的处理
 	public String payedOrder() throws PromptException {
 		try {
@@ -627,40 +604,12 @@ public class OrderAction extends RootAction {
 		this.closeOut();
 	}
 
-	public void loginWeixinUser() throws PromptException, Exception {/*// 微信自动注册并登录
-		try {
-			if (null != session.get("currentUser"))
-				return;
-			User u = new User();
-			// u.setUserName("weixinUser").setRealName("微信匿名登录用户");
-			UserDetailInfo detailInfo = UserAuthManager.getUserDetail(code);
-			u.setUserName("wxu" + new Date().getTime())
-					.setRealName(detailInfo.getNickname())
-					.setWeixin(detailInfo.getOpenId())
-					.setNationality(detailInfo.getCuntry())
-					.setSex(detailInfo.getSex());
-
-			if (null == userService.findUser(u)) {
-				userService.register(u);
-			}
-			u = userService.findUser(u);
-			session.put("currentUser", u);
-		} catch (PromptException e) {
-			throw e;
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw e;
-		}
-
-	*/}
 
 	// 用户查看自己的订单,注意需要按时间排序分页显示
 	public String userOrderList() throws PromptException, ServerErrorException {
 		try {
 			String path = ServletActionContext.getRequest().getServletPath();
 			System.out.println("path:" + path);
-			if (path.contains("weixin"))// 如果是从微信端进来的需要自动登录注册
-				loginWeixinUser();
 			User u = this.getCurrentUser();
 			orders = new ArrayList<Order>();
 			page.setTotalItemNumber(orderService.findAllUserOrders(orders, u,

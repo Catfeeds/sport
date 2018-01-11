@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="orderdetailFailBtn">
 			<ul>
-				<li class="backToHome"><a href="index.html" >返回首页</a></li>
+				<li class="backToHome"><a href="index.jsp" >返回首页</a></li>
 				<li class="moveNow"><a href="myorderindex.jsp" >马上跳转</a></li>
 			</ul>		
 		</div>

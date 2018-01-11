@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="orderdetailFailBtn">
 			<ul>
-				<li class="backToHome"><a href="index.html" >返回首页</a></li>
+				<li class="backToHome"><a href="index.jsp" >返回首页</a></li>
 				<li class="moveNow"><a href="#" >马上跳转</a></li>
 			</ul>		
 		</div>
@@ -76,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 			else
 			{
-				window.location.href="index.html";
+				window.location.href="index.jsp";
 			}
 
 			t=setTimeout("timedCount()",1000)

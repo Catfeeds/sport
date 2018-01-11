@@ -801,7 +801,7 @@ img {
 					<form class="cd-form" >
 					<p class="fieldset">
 						<span class="lb-show">　　用户名：</span>
-						<input class="full-width has-padding has-border" name="userName" id="signin-username" type="text" placeholder="请输入登陆账号、手机号码或者微信号">
+						<input class="full-width has-padding has-border" name="userName" id="signin-username" type="text" placeholder="请输入登陆账号或者手机号码">
 					</p>
 
 					<p class="fieldset">

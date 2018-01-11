@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 	<div class="content">
 		<div class="ucSimpleHeader">
-			<a href="index.html" class="meizuLogo"></a>
+			<a href="index.jsp" class="meizuLogo"></a>
 			<div class="trigger">
 				<a href="login.jsp">登录</a>
 				<span>&nbsp;|&nbsp;</span>

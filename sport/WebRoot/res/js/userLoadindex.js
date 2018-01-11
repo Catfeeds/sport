@@ -235,7 +235,7 @@ $(function(){
 		$(".username").parent().removeClass("checkedN");
 		$(".error1").hide();
 		$("#mz_Float").css("top","232px");
-		$("#mz_Float").find(".bRadius2").html("请输入登陆账号或者手机号或者微信号进行登录，长度为4-32个字符支持数字、字母、下划线，字母开头，字母或数字结尾");
+		$("#mz_Float").find(".bRadius2").html("请输入登陆账号或者手机号进行登录，长度为4-32个字符支持数字、字母、下划线，字母开头，字母或数字结尾");
 	});
 	//邮箱栏获得焦点
 	$(".email").focus(function(){

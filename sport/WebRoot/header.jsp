@@ -109,8 +109,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<li class="mainbannerSelected">
 						<a href="index" target="_parent">首页</a>
 					</li>
-					<li><a href="choosePlace.jsp" target="_parent">场馆预定</a></li>
-					<li><a href="chooseCoach.jsp" target="_parent">私人教练</a></li>
+					<li><a href="simpleSearch?condition.searchType=place&condition.searchFlag=complex&condition.address.id=0" target="_parent">场馆预定</a></li>
+					<li><a href="simpleSearch?condition.searchType=coach&condition.searchFlag=complex&condition.address.id=0" target="_parent">私人教练</a></li>
 					<li><a href="forum/articleandforumIndex" target="_parent">社交圈</a></li>
 					
 				</ul>

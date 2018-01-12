@@ -250,26 +250,7 @@ public class alterAction extends RootAction {
 			this.closeOut();
 			return;
 		}
-		/*int id = mtemp.getId();
-		if (id == coach.getId())// 代表是当前登录账号
-		{
-			if (!currentUser.isAuthenticated()) {
-				
-				json.add(false);
-				json.add("您的登录信息已过期，请重新登录！");
-				out.println(json);
-				this.closeOut();
-				return;
-			}
-		} else {
-			if (!currentUser.isPermitted("coach:*")) {
-				json.add(false);
-				json.add("您没有修改其它管理员信息的权限，请联系公司超级管理员进行申请该权限，或者用其他账户登录！");
-				out.println(json);
-				this.closeOut();
-				return;
-			}
-		}*/
+
 		Coach m=null;		
 		try {
 			m = coachService.findCoach((Coach) new Coach()

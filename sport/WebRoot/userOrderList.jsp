@@ -16,7 +16,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<title>用户订单管理</title>
 		<meta name="description" content="">
 		<meta name="author" content="templatemo">
-
 		<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
 		<link href="res/css/font-awesome.min.css" rel="stylesheet">
 		<link href="res/css/bootstrap.min.css" rel="stylesheet">

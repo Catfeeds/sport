@@ -82,12 +82,12 @@ function showInnerText(Id){
 		<s:if test="#session.currentCoach!=null">		
 			
 		</s:if>	
-		<s:elseif test="!#session.currentManager.company.host"	>
-			
-		</s:elseif>
-		<s:else>
+		<s:elseif test="#session.currentManager.company.host"	>
 			<li id="man_nav_2"  onclick="list_sub_nav(id,'通用信息管理')"  class="bg_image">通用信息管理</li>	
-		</s:else>
+		</s:elseif>
+<%-- 		<s:else>
+			<li id="man_nav_2"  onclick="list_sub_nav(id,'通用信息管理')"  class="bg_image">通用信息管理</li>	
+		</s:else> --%>
 		<shiro:hasPermission name="site:*">
 		<li id="man_nav_3"  onclick="list_sub_nav(id,'场馆信息管理')"  class="bg_image">场馆信息管理</li>	
 		</shiro:hasPermission>

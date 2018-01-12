@@ -111,7 +111,7 @@
 		}
 		//定时向后台发送请求查询订单支付情况，如果在10分钟内，用户未支付成功，则需要重新发起支付请求
 		function setTimer() {
-			timer = setInterval("queryOrderStatus();", 60000);//每60秒查询一次订单状态
+			timer = setInterval("queryOrderStatus();", 5000);//每60秒查询一次订单状态
 		}
 		//});
 	</script>

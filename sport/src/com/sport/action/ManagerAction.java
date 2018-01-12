@@ -33,6 +33,10 @@ import com.sport.util.EncryptUtils;
 @Component
 @Scope("prototype")
 public class ManagerAction extends RootAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ImageService imageService;
 	private ManagerService managerService;
 	private Manager manager;
@@ -142,19 +146,19 @@ public class ManagerAction extends RootAction {
 			 * role=roleService.load(new Role().setName("ownerLooker"));
 			 * roles.add(role); manager.setRoles(roles); }
 			 */
-			System.out.println("ids:"+ids);
-			if (ids != null&&(ids!="")) {
+			System.out.println("ids:" + ids);
+			if (ids != null && (ids != "")) {
 				List<Right> managerRights = new ArrayList<Right>();
-				String idArr[]=ids.split(",");
+				String idArr[] = ids.split(",");
 				for (String id : idArr) {
 					Right right = rightService.load(Integer.parseInt(id));
 					managerRights.add(right);
-					System.out.println("right:"+id);
+					System.out.println("right:" + id);
 				}
 				manager.setRights(managerRights);
 			}
 			if (managerService.add(manager)) {
-				System.out.println(manager.getRealName());	
+				System.out.println(manager.getRealName());
 				errorMsg = "添加管理员成功！";
 				throw new PromptException(errorMsg);
 			}
@@ -266,7 +270,6 @@ public class ManagerAction extends RootAction {
 	public void alterHeadImg() throws PromptException, ServerErrorException {
 		this.getResponseAndOut();
 		JSONArray json = new JSONArray();
-
 		Manager mtemp = (Manager) session.get("currentManager");
 		if (mtemp == null) {
 			json.add(false);
@@ -274,16 +277,6 @@ public class ManagerAction extends RootAction {
 			this.closeOut();
 			return;
 		}
-		/*
-		 * int id = mtemp.getId(); if (id == manager.getId())// 代表是当前登录账号 { if
-		 * (!currentUser.isAuthenticated()) {
-		 * 
-		 * json.add(false); json.add("您的登录信息已过期，请重新登录！"); out.println(json);
-		 * this.closeOut(); return; } } else { if
-		 * (!currentUser.isPermitted("manager:*")) { json.add(false);
-		 * json.add("您没有修改其它管理员信息的权限，请联系公司超级管理员进行申请该权限，或者用其他账户登录！");
-		 * out.println(json); this.closeOut(); return; } }
-		 */
 		Manager m = null;
 		try {
 			m = managerService.findManager((Manager) new Manager()
@@ -335,17 +328,6 @@ public class ManagerAction extends RootAction {
 		JSONArray json = new JSONArray();
 		this.getResponseAndOut();
 		try {
-			/*
-			 * Subject currentUser = SecurityUtils.getSubject(); Manager mtemp =
-			 * (Manager) session.get("currentManager"); if (mtemp == null) {
-			 * json.add(false); json.add("您的登录信息已过期，请重新登录！"); } int id =
-			 * mtemp.getId(); if (id == manager.getId())// 代表是当前登录账号 { if
-			 * (!currentUser.isAuthenticated()) { json.add(false);
-			 * json.add("您的登录信息已过期，请重新登录！"); } } else { if
-			 * (!currentUser.isPermitted("manager:*")) { json.add(false);
-			 * json.add("您没有修改其它管理员信息的权限，请联系公司超级管理员进行申请该权限，或者用其他账户登录！"); } }
-			 */
-
 			Manager m = managerService.findManager((Manager) new Manager()
 					.setId(manager.getId()));// 这里前台传递id即可
 			if (m == null) {

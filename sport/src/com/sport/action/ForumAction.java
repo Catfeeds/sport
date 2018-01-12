@@ -115,13 +115,13 @@ public class ForumAction extends RootAction {
 			Person owner = this.getCurrentPerson();
 			if (owner == null)
 				throw new PromptException("请先登录后再操作！");
-			// 如果要上传公司logo
+			// 如果要上传朋友圈图片
 			if (file != null) {
 				if (file.canRead() && (file.isFile()) && (file.exists())) {
-					String webDir = "/upload/file/companyInfo";
+					String webDir = "/upload/img/forum";
 					String savePath = ServletActionContext.getServletContext()
 							.getRealPath(webDir);
-					fileFileName = "logo" +fileFileName;
+					fileFileName = "forum" +fileFileName;
 					Image image = imageService.saveFile(file, savePath, webDir,
 							fileFileName);
 					if (image != null)
@@ -160,13 +160,13 @@ public class ForumAction extends RootAction {
 	// 修改某社交圈基本信息
 	public String alterForum() throws PromptException, ServerErrorException {
 		try {
-			// 如果要修改公司logo
+			// 如果要上传朋友圈图片
 			if (file != null) {
 				if (file.canRead() && (file.isFile()) && (file.exists())) {
-					String webDir = "/upload/file/companyInfo";
+					String webDir = "/upload/img/forum";
 					String savePath = ServletActionContext.getServletContext()
 							.getRealPath(webDir);
-					fileFileName = "logo" + new Date().getTime() + fileFileName;
+					fileFileName = "forum" + new Date().getTime() + fileFileName;
 					Image image = imageService.saveFile(file, savePath, webDir,
 							fileFileName);
 					if (image != null)

@@ -23,6 +23,10 @@ import com.sport.service.OrderService;
 @Component
 @Scope("prototype")
 public class AcountAction extends RootAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Acount acount;
 	private List<Acount> acounts;
 	private AcountService acountService;
